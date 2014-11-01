@@ -1,0 +1,110 @@
+2014-10-31 10:00:35	◥	_glitch (~weechat@unaffiliated/glitch/x-5362854) has joined #weechat
+2014-10-31 10:00:35	ℹ 	Topic for #weechat is "http://weechat.org/ | Latest stable version: 1.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2014-10-31 10:00:35	ℹ 	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 28 Sep 2014 03:29:04
+2014-10-31 10:00:35	ℹ 	Channel #weechat: 563 nicks (3 ops, 1 voice, 559 normals)
+2014-10-31 10:00:36	ℹ 	PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: http://weechat.org/doc/
+2014-10-31 10:00:36	ℹ 	URL for #weechat: http://weechat.org/
+2014-10-31 10:00:37	ℹ 	Channel created on Sun, 26 Nov 2006 00:42:51
+2014-10-31 10:01:23	◣	kamora (kamora@unaffiliated/kamora) has left #weechat ("BitchX 1.3.1")
+2014-10-31 10:01:34	◥	mgue (~mgue@p548A62D8.dip0.t-ipconnect.de) has joined #weechat
+2014-10-31 10:02:21	◥	sdfvsfgvsdf (~bauasdgwg@37.254.251.185) has joined #weechat
+2014-10-31 10:03:55	ℹ 	argakiig_absent is now known as argakiig
+2014-10-31 10:09:00	◥	diegovio1 (~diego@unaffiliated/diegoviola) has joined #weechat
+2014-10-31 10:09:24	ℹ 	diegovio1 is now known as dviola
+2014-10-31 10:10:42	◥	chandan__ (~chandan@106.51.242.80) has joined #weechat
+2014-10-31 10:12:02	_glitch	I'm messing with someone else's config to make it my own and th I'm screwing with someone else's configs to make them my own but the 'topics' are all the same color as the bg. I just need to know which
+2014-10-31 10:12:19	_glitch	option is for the topic color
+2014-10-31 10:14:12	◣	frakturfreak (fraktur@unaffiliated/frakturfreak) has quit (Disconnected by services)
+2014-10-31 10:14:15	◥	mimo_m (~mimo_m@41.44.106.139) has joined #weechat
+2014-10-31 10:14:32	◥	frakturfreak1 (fraktur@unaffiliated/frakturfreak) has joined #weechat
+2014-10-31 10:16:05	Yaniel	use iset and search
+2014-10-31 10:17:13	sakkemo	/iset title => the one with color_fg
+2014-10-31 10:17:36	sakkemo	=> weechat.bar.title.color_fg
+2014-10-31 10:17:37	◥	ayrie (~pi@unaffiliated/alisonc) has joined #weechat
+2014-10-31 10:17:41	ayrie	Hmm
+2014-10-31 10:17:44	ayrie	10:15:16 -- JessicaTeeples: No suck nick
+2014-10-31 10:18:01	ayrie	'No suck nick' <-- seems like a typo in weechat
+2014-10-31 10:18:05	Yaniel	remmeber you need the iset.pl script for that command
+2014-10-31 10:18:50	ℹ 	frakturfreak1 is now known as frakturfreak
+2014-10-31 10:18:52	Nicd-	ayrie: I think that comes from the network
+2014-10-31 10:19:03	ayrie	Nicd-: I'll try it on a different network
+2014-10-31 10:19:06	Nicd-	I'm getting "no such server" on freenode
+2014-10-31 10:19:23	Nicd-	and " 16:18:55 	***	[teoajktoaejtoj] Nick does not exist" on bitlbee
+2014-10-31 10:19:29	◥	Nnel (~Nnel@host86-189-1-123.range86-189.btcentralplus.com) has joined #weechat
+2014-10-31 10:19:35	ayrie	(That trying to query someone who isn't on the network)
+2014-10-31 10:19:38	ayrie	                                            
+2014-10-31 10:19:40	ayrie	10:19:24 -- bhugherdhabhuun: No such nick/channel
+2014-10-31 10:19:43	ayrie	That is what I get on Freenode
+2014-10-31 10:19:53	ayrie	I did not know this was come from the network.
+2014-10-31 10:21:47	Nicd-	ayrie:  16:21:36 	Freenode -->	:sendak.freenode.net 401 Nicd- okaetroketoaektoaetak :No such nick/channel
+2014-10-31 10:21:57	Nicd-	that's the raw message returned from the network
+2014-10-31 10:22:03	ayrie	Aha
+2014-10-31 10:22:27	ayrie	ta for the explaination :)
+2014-10-31 10:22:45	◣	Ravana (~Ravana@unaffiliated/ravana) has quit (Quit: WeeChat 1.0.1)
+2014-10-31 10:23:17	Nicd-	ayrie: can check what you get from the network with /server raw
+2014-10-31 10:23:50	◣	Nnel (~Nnel@host86-189-1-123.range86-189.btcentralplus.com) has quit (Ping timeout: 245 seconds)
+2014-10-31 10:23:59	◥	Ravana (~Ravana@unaffiliated/ravana) has joined #weechat
+2014-10-31 10:24:05	◣	Ravana (~Ravana@unaffiliated/ravana) has quit (Client Quit)
+2014-10-31 10:24:32	◥	Ravana (~Ravana@unaffiliated/ravana) has joined #weechat
+2014-10-31 10:29:27	ℹ 	Keridos_off is now known as Keridos
+2014-10-31 10:34:01	ayrie	ah
+2014-10-31 10:34:27	◥	mineral (~Aidan@unaffiliated/mineral) has joined #weechat
+2014-10-31 10:34:29	ayrie	also, how can I get rid of modelines in the status bar? i don't need them because i am not op an any channels but they take o=up lots of space for some of the channels
+2014-10-31 10:34:55	ayrie	14:#xkcd-compsci(+ntrSCTf [5j#R15,10m#M15,5t]:3){76}*
+2014-10-31 10:35:17	ayrie	I don't need that +ntrSCTf agfiuguseirgeuigreh crap, i don't understand what it means anyway.
+2014-10-31 10:36:40	◣	read (~Aidan@unaffiliated/mineral) has quit (Ping timeout: 240 seconds)
+2014-10-31 10:37:28	ayrie	I don't see anything corresponding to the mode line on weechat.bar.status.items.
+2014-10-31 10:44:37	◥	semeion (~semeion@unaffiliated/semeion) has joined #weechat
+2014-10-31 10:45:32	_glitch	sakkemo: /iset weechat
+2014-10-31 10:45:34	_glitch	?
+2014-10-31 10:45:59	_glitch	sakkemo: I see now. Sorry. Thanks
+2014-10-31 10:46:19	sakkemo	right, good :)
+2014-10-31 10:46:46	Naama	Okay so. Are there any known issues with Weechat and large channels?
+2014-10-31 10:47:14	_glitch	sakkemo: Getting unknown command /iset
+2014-10-31 10:47:27	Naama	I'm on one large channel and it acts weird. For some reason the backlog clears whenever it feels like it.
+2014-10-31 10:47:56	MrElendig	_glitch: /script install iset.py
+2014-10-31 10:48:10	sakkemo	_glitch: it's a script for recent enough weechats, see above ^
+2014-10-31 10:48:28	◥	dkoby (~dmitry@37.21.175.63) has joined #weechat
+2014-10-31 10:48:30	_glitch	script: iset.py not found
+2014-10-31 10:48:49	_glitch	iset.pl maybe?
+2014-10-31 10:48:56	MrElendig	yes
+2014-10-31 10:49:07	_glitch	Ah. There it is.
+2014-10-31 10:50:12	_glitch	Er.. I don't think that's the right option, sakkemo.
+2014-10-31 10:50:53	_glitch	What I meant by the topic is that 'Topic for #weechat', #weechat is same color as the background. 
+2014-10-31 10:50:58	sakkemo	_glitch: do you mean topic when you do /topic and not one that's shown in a title bar (at least in somewhat default configs)?
+2014-10-31 10:51:21	ℹ 	Topic for #weechat is "http://weechat.org/ | Latest stable version: 1.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2014-10-31 10:51:21	ℹ 	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 28 Sep 2014 03:29:04
+2014-10-31 10:51:34	_glitch	Yes.
+2014-10-31 10:51:45	sakkemo	try this one: weechat.color.chat_channel
+2014-10-31 10:51:46	_glitch	For some reason, all instances beginning with the '#' are black
+2014-10-31 10:53:26	_glitch	sakkemo: That's it there. But for some reason it gives me 'Error, failed to set option'
+2014-10-31 10:53:39	◥	owluntu (~owlsoap@c-5eeaaa0d-74736162.cust.telenor.se) has joined #weechat
+2014-10-31 10:54:35	sakkemo	/set weechat.color.chat_channel 220     is the exact command, no = or anything if that's the reason
+2014-10-31 10:55:01	_glitch	I used /set weechat.color.chat_channel grey
+2014-10-31 10:55:34	sakkemo	try gray :P
+2014-10-31 10:55:46	_glitch	... derp
+2014-10-31 10:55:49	_glitch	Lol. Thanks.
+2014-10-31 10:55:59	sakkemo	I tend to use the numbers though
+2014-10-31 10:57:02	◣	ogny (~orkun@unaffiliated/ogny) has quit (Quit: WeeChat 0.4.2)
+2014-10-31 10:57:48	_glitch	Alright, one more? The color of the channel in the bar turns darkgray when there's activity. I want to change it to cyan. Which option is this?
+2014-10-31 11:00:27	sakkemo	buffers.pl bar or the default hotlist (with the numbers)?
+2014-10-31 11:00:30	ℹ 	owluntu is now known as owlsauce
+2014-10-31 11:00:38	_glitch	I'm using buffers.pl
+2014-10-31 11:01:36	Naama	http://is.gd/5WESlZ
+2014-10-31 11:01:56	sakkemo	_glitch: try searching with /iset buffers (probably buffers.color.hotlist_message_fg)
+2014-10-31 11:02:44	_glitch	sakkemo: That did it. Thanks again!
+2014-10-31 11:04:55	◥	ogny (~orkun@unaffiliated/ogny) has joined #weechat
+2014-10-31 11:07:56	◥	singalaut (~mami@unaffiliated/tomoe-mami/x-1769741) has joined #weechat
+2014-10-31 11:09:05	◣	KillYourTV (~kytv@gateway/tor-sasl/killyourtv) has quit (Remote host closed the connection)
+2014-10-31 11:09:54	◥	KillYourTV (~kytv@gateway/tor-sasl/killyourtv) has joined #weechat
+2014-10-31 11:13:22	◣	aswen (~aswen@smtp3.nedap.com) has quit (Quit: WeeChat 1.0.1)
+2014-10-31 11:13:38	◥	Nnel (~Nnel@host86-189-1-123.range86-189.btcentralplus.com) has joined #weechat
+2014-10-31 11:16:47	◣	sirderpalot (~pzzt@unaffiliated/sirderpalot) has quit (Ping timeout: 250 seconds)
+2014-10-31 11:18:17	◣	Nnel (~Nnel@host86-189-1-123.range86-189.btcentralplus.com) has quit (Ping timeout: 264 seconds)
+2014-10-31 11:28:52	◣	dorftrottel (~horst@gateway/tor-sasl/dorftrottel) has quit (Remote host closed the connection)
+2014-10-31 11:29:50	◥	dorftrottel (~horst@gateway/tor-sasl/dorftrottel) has joined #weechat
+2014-10-31 11:32:47	◥	camel_case_t (~Google_Lo@75-25-141-102.lightspeed.okldca.sbcglobal.net) has joined #weechat
+2014-10-31 11:33:05	◣	mimo_m (~mimo_m@41.44.106.139) has left #weechat
+2014-10-31 11:37:26	◥	kelnoky (~shao@95.91.227.105) has joined #weechat
+2014-10-31 11:46:51	◣	_glitch (~weechat@unaffiliated/glitch/x-5362854) has left #weechat ("WeeChat 1.0.1")
+2014-10-31 11:46:53	ℹ 	irc: disconnected from server

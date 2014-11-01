@@ -1,0 +1,416 @@
+2014-10-23 21:39:45	-->	_glitch (~rlee@unaffiliated/glitch/x-5362854) has joined #bash
+2014-10-23 21:39:45	--	Topic for #bash is "Shellshock: http://mywiki.wooledge.org/BashFAQ/111 | FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://xrl.us/bhk9ww | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Devel: http://xrl.us/bmodjy | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash"
+2014-10-23 21:39:45	--	Topic set by greycat (~wooledg@remote.wooledge.org) on Fri, 03 Oct 2014 13:41:59
+2014-10-23 21:39:45	--	Channel #bash: 940 nicks (0 ops, 0 voices, 940 normals)
+2014-10-23 21:39:45	--	PvNotice(ChanServ): Welcome to #bash, we discuss the GNU bash shell.  Be explicit if your question is about another shell.  Don't trust the Internet on bash, learn from the resources in the topic instead.
+2014-10-23 21:39:47	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2014-10-23 21:40:03	<--	jottr_ (~jottr@unaffiliated/jottr) has quit (Ping timeout: 255 seconds)
+2014-10-23 21:40:03	_glitch	IS this a decent place to request scripts?
+2014-10-23 21:40:11	_glitch	Or is there a dedicated site/channel?
+2014-10-23 21:40:11	<--	mli (~mohl@inet-cnmc02-pri-ext.oracle.co.jp) has quit (Remote host closed the connection)
+2014-10-23 21:40:33	hyphenated	_glitch: it's a place to request help with scripts you're writing
+2014-10-23 21:40:39	-->	_Cody (~x@gateway/tor-sasl/commandercody/x-44464735) has joined #bash
+2014-10-23 21:40:41	-->	causasui (~causasui@wikipedia/causa-sui) has joined #bash
+2014-10-23 21:40:46	-->	mli (~mohl@inet-cnmc02-pri-ext.oracle.co.jp) has joined #bash
+2014-10-23 21:41:00	_glitch	hyphenated: Honestly, I've never written a script. 
+2014-10-23 21:41:15	hyphenated	you've typed commands in a shell before?
+2014-10-23 21:41:23	_glitch	yes.
+2014-10-23 21:41:42	-->	BoredHam1 (~root@gateway/tor-sasl/boredhamster) has joined #bash
+2014-10-23 21:41:49	hyphenated	it's similar to that, just saving them in a file instead
+2014-10-23 21:42:02	-->	echelon (~echelon@gateway/tor-sasl/harel) has joined #bash
+2014-10-23 21:42:04	_glitch	I know what it is. I've used them, just never written one.
+2014-10-23 21:42:11	hyphenated	there are guide and FAQ links in the topic, which are excellent starting points
+2014-10-23 21:42:11	[arx]	there is a guide on getting started in the topic
+2014-10-23 21:42:21	_glitch	bash-hackers?
+2014-10-23 21:42:38	[arx]	further left
+2014-10-23 21:42:43	hyphenated	no. read the topic more slowly, starting from the beginning
+2014-10-23 21:42:51	_glitch	I see it. Thank you.
+2014-10-23 21:43:12	<--	kahen` (~infenwe@0118200527.0.fullrate.dk) has quit (Ping timeout: 255 seconds)
+2014-10-23 21:44:51	-->	justlooks_ (b781bf42@gateway/web/freenode/ip.183.129.191.66) has joined #bash
+2014-10-23 21:45:20	-->	darkbasic (~quassel@niko.linuxsystems.it) has joined #bash
+2014-10-23 21:45:21	justlooks_	hi , how can i get 13-bit timestamp in comandline?
+2014-10-23 21:45:43	<--	Sample (~Sample@unaffiliated/sample) has quit (Quit: *ping*)
+2014-10-23 21:45:53	hyphenated	one and a half bytes?
+2014-10-23 21:46:25	<--	kevinb (~europa-zn@162-206-226-27.lightspeed.tukrga.sbcglobal.net) has quit (Quit: ZNC - http://znc.in)
+2014-10-23 21:46:36	justlooks_	hyphenated: i mean 13 number
+2014-10-23 21:46:43	hyphenated	digit
+2014-10-23 21:46:54	justlooks_	hyphenated:  yes
+2014-10-23 21:47:06	hyphenated	using the date command
+2014-10-23 21:47:12	-->	vincentor (~vincentor@218.107.55.254) has joined #bash
+2014-10-23 21:47:32	justlooks_	hyphenated:  but date only offer 10 digit timestamp
+2014-10-23 21:48:04	hyphenated	which 10?
+2014-10-23 21:48:12	[arx]	epoch i think.
+2014-10-23 21:48:52	--	hypermist is now known as pcupgrades
+2014-10-23 21:49:21	justlooks_	hyphenated:  # date +%s    ---->  1414115347
+2014-10-23 21:49:34	hyphenated	justlooks_: ok, and what do you want it to be?
+2014-10-23 21:49:43	[arx]	((mindreading++))
+2014-10-23 21:49:55	justlooks_	hyphenated: i need get 1414115347XXX
+2014-10-23 21:50:05	hyphenated	and XXX will be..?
+2014-10-23 21:50:17	justlooks_	hyphenated: number
+2014-10-23 21:50:37	justlooks_	hyphenated: digit
+2014-10-23 21:50:53	hyphenated	justlooks_: since you're being useless at explaining what you want, you can have: date "+%s987"
+2014-10-23 21:51:02	hyphenated	that's 13 digits
+2014-10-23 21:51:21	hyphenated	possibly not the 13 you want, but what you asked for
+2014-10-23 21:51:47	<--	talsamon (~talsamon@91-115-90-106.adsl.highway.telekom.at) has quit (Quit: Leaving)
+2014-10-23 21:52:20	-->	uZiel (~uZiel@c-67-169-31-227.hsd1.ca.comcast.net) has joined #bash
+2014-10-23 21:55:11	-->	al_nz1 (~bigal.nz@203.118.180.179) has joined #bash
+2014-10-23 21:56:02	_glitch	I'm looking for a script that will check ~/.xinitrc for a string and run commands based on said string.
+2014-10-23 21:57:25	-->	kevinb (~europa-zn@162-206-226-27.lightspeed.tukrga.sbcglobal.net) has joined #bash
+2014-10-23 21:58:41	hyphenated	_glitch: are you able to do that manually, without a script?
+2014-10-23 21:59:32	<--	tempus_fol (~tempus@gateway/tor-sasl/foltempus) has quit (Ping timeout: 246 seconds)
+2014-10-23 21:59:53	<--	debconf (~deb@gateway/tor-sasl/debconf) has quit (Ping timeout: 246 seconds)
+2014-10-23 21:59:53	<--	guampa (~guampa@gateway/tor-sasl/guampa) has quit (Ping timeout: 246 seconds)
+2014-10-23 22:00:05	justlooks_	_glitch: look for this ? https://gist.github.com/justlooks/25d134d9d44ca630450c
+2014-10-23 22:00:05	<--	al_nz1 (~bigal.nz@203.118.180.179) has quit (Ping timeout: 265 seconds)
+2014-10-23 22:01:34	<--	uZiel (~uZiel@c-67-169-31-227.hsd1.ca.comcast.net) has quit (Ping timeout: 260 seconds)
+2014-10-23 22:01:56	-->	hgl (~hgl@unaffiliated/hgl) has joined #bash
+2014-10-23 22:02:13	-->	dionus (~dionus@78.157.202.38) has joined #bash
+2014-10-23 22:02:37	<--	polyus (~polyus@23.19.222.177) has quit (Quit: polyus)
+2014-10-23 22:03:31	-->	eroll (~erol@180.251.53.162) has joined #bash
+2014-10-23 22:03:57	_glitch	justlooks: Yes, like that. How would I make that run a script "~/bspwmrc"?
+2014-10-23 22:04:06	<--	BoredHam1 (~root@gateway/tor-sasl/boredhamster) has quit (Ping timeout: 246 seconds)
+2014-10-23 22:04:06	<--	echelon (~echelon@gateway/tor-sasl/harel) has quit (Ping timeout: 246 seconds)
+2014-10-23 22:04:06	<--	causasui (~causasui@wikipedia/causa-sui) has quit (Ping timeout: 246 seconds)
+2014-10-23 22:04:06	<--	_Cody (~x@gateway/tor-sasl/commandercody/x-44464735) has quit (Ping timeout: 246 seconds)
+2014-10-23 22:04:26	<--	frauxsh (~pi@gateway/tor-sasl/frauxsh) has quit (Ping timeout: 246 seconds)
+2014-10-23 22:04:57	<--	wcfields (~keynull@209.36.40.50) has quit (Quit: Leaving)
+2014-10-23 22:05:01	-->	al_nz1 (~bigal.nz@203.118.180.179) has joined #bash
+2014-10-23 22:05:57	<--	hgl (~hgl@unaffiliated/hgl) has quit (Ping timeout: 244 seconds)
+2014-10-23 22:06:11	<--	moparisthebest (~quassel@gateway/tor-sasl/moparisthebest) has quit (Ping timeout: 246 seconds)
+2014-10-23 22:06:59	<--	dionus (~dionus@78.157.202.38) has quit (Remote host closed the connection)
+2014-10-23 22:07:25	-->	jalalsfs (~jalal@unaffiliated/jalalsfs) has joined #bash
+2014-10-23 22:08:00	<--	Gummz (148be247@gateway/web/freenode/ip.20.139.226.71) has quit (Quit: Page closed)
+2014-10-23 22:08:10	<--	MrWoohoo (~MrWoohoo@pool-74-100-140-127.lsanca.fios.verizon.net) has quit (Quit: ["Textual IRC Client: www.textualapp.com"])
+2014-10-23 22:08:12	-->	ungnis (~ungnis@142.91.255.44) has joined #bash
+2014-10-23 22:08:57	<--	wroathe (~wroathe@c-50-188-42-86.hsd1.mn.comcast.net) has quit (Ping timeout: 245 seconds)
+2014-10-23 22:10:23	-->	todd_dsm (~todd_dsm@173-29-159-188.client.mchsi.com) has joined #bash
+2014-10-23 22:13:17	<--	JeanCarloMachado (~jean@177.4.43.233) has quit (Ping timeout: 250 seconds)
+2014-10-23 22:13:47	-->	james41382 (~james@unaffiliated/james41382) has joined #bash
+2014-10-23 22:15:27	justlooks_	_glitch: just print the script name ,and execute like this # echo -e "yes\nno" | awk '{if($0=="yes"){print "test.sh"}}' |sh
+2014-10-23 22:16:32	-->	eyestrain (~eyestrain@c-98-245-213-97.hsd1.co.comcast.net) has joined #bash
+2014-10-23 22:16:45	mute	woah what
+2014-10-23 22:18:40	-->	artrldr (~artrldr@23.19.108.210) has joined #bash
+2014-10-23 22:19:00	<--	ungnis (~ungnis@142.91.255.44) has quit (Remote host closed the connection)
+2014-10-23 22:19:00	<--	artrldr (~artrldr@23.19.108.210) has quit (Remote host closed the connection)
+2014-10-23 22:19:17	mute	that's terrible
+2014-10-23 22:19:34	-->	desultory (~desultory@gentoo/developer/desultory) has joined #bash
+2014-10-23 22:19:50	mute	_glitch: what are you looking for in .xinitrc
+2014-10-23 22:19:52	alanjf	thumpba_: So what if the russians are conducting secret anal probe tests. That happened at least 50 years ago in the US, so as usual the Russians are way behind.
+2014-10-23 22:20:02	<--	otherflow (~otherflow@unaffiliated/otherflow) has quit (Quit: Quitte)
+2014-10-23 22:20:09	NBhosting	whats wrong in this https://dpaste.de/P1Bu
+2014-10-23 22:21:04	NBhosting	i think the @ in for j in `dig $1 RRSIG @x.x.x.x | egrep -o '2[0-9]{13} 2[0-9]{13}'`;
+2014-10-23 22:21:39	dreisner	!for$( > NBhosting
+2014-10-23 22:21:39	greybot	NBhosting: Never do this: for x in $(command) or `command` or $var. for-in is used for iterating arguments, not (output) strings. Instead, use a glob (eg. *.txt), arrays (eg. "${names[@]}") or a while-read loop (eg. while read -r line). See http://mywiki.wooledge.org/BashPitfalls#pf1 and http://mywiki.wooledge.org/DontReadLinesWithFor
+2014-10-23 22:22:17	<--	msmith (~msmith@pool-72-71-204-171.cncdnh.fast00.myfairpoint.net) has quit (Remote host closed the connection)
+2014-10-23 22:22:18	-->	ulfinneom (~ulfinneom@23.19.213.3) has joined #bash
+2014-10-23 22:22:21	<--	Ardonik (~user@75.28.101.30) has quit (Ping timeout: 255 seconds)
+2014-10-23 22:22:45	-->	wethu (~egray@unaffiliated/wethu) has joined #bash
+2014-10-23 22:23:10	<--	Kallis (~Kallis@cpc15-slam6-2-0-cust171.2-4.cable.virginm.net) has quit (Read error: Connection reset by peer)
+2014-10-23 22:23:40	--	justlooks_ is now known as justlooks
+2014-10-23 22:24:15	-->	bluedrea_ (~bluedream@66-215-92-80.dhcp.psdn.ca.charter.com) has joined #bash
+2014-10-23 22:24:21	<--	Guest89145 (~logos@112.Red-88-9-13.dynamicIP.rima-tde.net) has quit (Ping timeout: 272 seconds)
+2014-10-23 22:25:19	-->	msmith (~msmith@pool-72-71-204-171.cncdnh.fast00.myfairpoint.net) has joined #bash
+2014-10-23 22:25:29	<--	leo2007 (~user@221.222.158.80) has left #bash ("rcirc on GNU Emacs 25.0.50.5")
+2014-10-23 22:26:06	<--	eyestrain (~eyestrain@c-98-245-213-97.hsd1.co.comcast.net) has quit (Quit: Konversation terminated!)
+2014-10-23 22:26:18	<--	bluedreams (~bluedream@66-215-92-80.dhcp.psdn.ca.charter.com) has quit (Ping timeout: 260 seconds)
+2014-10-23 22:28:48	-->	Streusel (~Anonymous@unaffiliated/streusel) has joined #bash
+2014-10-23 22:29:26	-->	shampine (~shampine@unaffiliated/shampine) has joined #bash
+2014-10-23 22:30:12	-->	cascade_ (~cascade@66.55.134.216) has joined #bash
+2014-10-23 22:30:13	-->	poeticrpm (~poeticrpm@rrcs-71-42-179-100.sw.biz.rr.com) has joined #bash
+2014-10-23 22:32:05	_glitch	mute: Looking for "~/.colors/fresh" in .xinitrc
+2014-10-23 22:34:20	<--	jalalsfs (~jalal@unaffiliated/jalalsfs) has quit (Ping timeout: 240 seconds)
+2014-10-23 22:34:58	DANtheBEASTman	how do I string comparison in sh? I'm trying "$1" == '-v' but I get tmw:1: = not found https://gist.github.com/DanielFGray/78f8fcad7c53b0a37be3
+2014-10-23 22:35:07	<--	dop (~dop@5.153.234.106) has quit (Ping timeout: 272 seconds)
+2014-10-23 22:35:15	<--	ron_o (~ron_o@unaffiliated/ron-o/x-8242187) has quit (Quit: WeeChat 5.7)
+2014-10-23 22:35:17	-->	dop (~dop@5.153.234.106) has joined #bash
+2014-10-23 22:35:32	[arx]	=
+2014-10-23 22:35:42	yitz_	Protip: paste the single line of code in question
+2014-10-23 22:36:25	-->	mingdao (~mingdao@71.45.8.102) has joined #bash
+2014-10-23 22:36:33	<--	colorbot (~tbot@118.200.239.248) has quit (Remote host closed the connection)
+2014-10-23 22:36:49	--	mingdao is now known as Guest49576
+2014-10-23 22:37:08	<--	webstrand (~webstrand@adsl-76-235-167-229.dsl.klmzmi.sbcglobal.net) has quit (Ping timeout: 255 seconds)
+2014-10-23 22:37:10	DANtheBEASTman	[arx]: I'm surprise that doesn't assign a value rather than compare it..
+2014-10-23 22:37:54	[arx]	test doesn't assign variables
+2014-10-23 22:38:07	DANtheBEASTman	ah ok
+2014-10-23 22:38:49	DANtheBEASTman	oh hm.. now I need to pop off the first argument so it doesn't get used in $* ... maybe I'll just make separate functions
+2014-10-23 22:39:02	yitz_	"shift"
+2014-10-23 22:39:13	yitz_	And don't use $*
+2014-10-23 22:39:23	DANtheBEASTman	shift $1?
+2014-10-23 22:39:33	-->	jraglin (~jraglin@202.sub-70-210-194.myvzw.com) has joined #bash
+2014-10-23 22:39:48	<--	msmith (~msmith@pool-72-71-204-171.cncdnh.fast00.myfairpoint.net) has quit (Remote host closed the connection)
+2014-10-23 22:39:59	--	irc: disconnected from server
+2014-10-24 13:46:03	-->	_glitch (~rlee@unaffiliated/glitch/x-5362854) has joined #bash
+2014-10-24 13:46:03	--	Topic for #bash is "Shellshock: http://mywiki.wooledge.org/BashFAQ/111 | FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://xrl.us/bhk9ww | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Devel: http://xrl.us/bmodjy | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash"
+2014-10-24 13:46:03	--	Topic set by greycat (~wooledg@remote.wooledge.org) on Fri, 03 Oct 2014 13:41:59
+2014-10-24 13:46:04	--	Channel #bash: 996 nicks (0 ops, 0 voices, 996 normals)
+2014-10-24 13:46:04	--	PvNotice(ChanServ): Welcome to #bash, we discuss the GNU bash shell.  Be explicit if your question is about another shell.  Don't trust the Internet on bash, learn from the resources in the topic instead.
+2014-10-24 13:46:05	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2014-10-24 13:48:01	_glitch	I'm looking for a script that will read my .xinitrc and look for '~/.colors/<value>' and then execute commands based on the returned value.
+2014-10-24 13:48:48	LucaB	..
+2014-10-24 13:49:44	<--	authority (~authority@odtpfwr1x.oxy.com) has quit (Quit: Leaving.)
+2014-10-24 13:50:57	lhunath	_glitch: happy hunting.
+2014-10-24 13:51:22	-->	ivanshmakov (~ivanshmak@2a02:2560:6d4:26ca::1:1d) has joined #bash
+2014-10-24 13:51:44	-->	aswen (~aswen@lochem.swen.nu) has joined #bash
+2014-10-24 13:52:11	-->	Otyugh (~otyugh__@ARennes-251-1-198-184.w2-10.abo.wanadoo.fr) has joined #bash
+2014-10-24 13:52:24	_glitch	 lhunath: It's not possible?
+2014-10-24 13:52:25	<--	neradis (~neradis@95.91.223.113) has quit (Quit: Konversation terminated!)
+2014-10-24 13:53:03	<--	elkorn (~elkorn@188.121.21.132) has quit (Remote host closed the connection)
+2014-10-24 13:53:23	<--	sqz (~sqz@108.60.218.117) has quit (Remote host closed the connection)
+2014-10-24 13:54:02	edakiri	Zap-W: aesthetic
+2014-10-24 13:54:17	-->	jraglin (~jraglin@67.239.194.99) has joined #bash
+2014-10-24 13:54:50	edakiri	_glitch: you can test with BASh using [[ ]] . Return value is in $?
+2014-10-24 13:54:51	<--	Mkop (~Mkop@fsf/member/Mkop) has quit (Quit: Leaving)
+2014-10-24 13:57:12	<--	thekey (~thekey@50-202-79-166-static.hfc.comcastbusiness.net) has quit (Remote host closed the connection)
+2014-10-24 13:57:43	<--	jthunder (~jthunder@70.28.245.100) has quit (Quit: jthunder)
+2014-10-24 13:57:47	lhunath	_glitch: should be possible.
+2014-10-24 13:57:54	emg	_glitch: will there only be one line with '~/.colors/something' ?
+2014-10-24 13:57:56	-->	nonicken (~Name@unaffiliated/ms-/x-8800476) has joined #bash
+2014-10-24 13:58:07	emg	_glitch: what else will be on the line?
+2014-10-24 13:58:24	lhunath	what commands?  what return value?  based on, how?
+2014-10-24 13:58:28	-->	leeyaa (d4686f43@gateway/web/freenode/ip.212.104.111.67) has joined #bash
+2014-10-24 13:58:30	leeyaa	hello
+2014-10-24 13:58:51	lhunath	if your expectation was for US to WRITE that script for you, at LEAST give us less vagueries.  we cannot read your mind.
+2014-10-24 13:58:52	-->	ioio (~ioio@37-1-162-187.ip.skylogicnet.com) has joined #bash
+2014-10-24 13:59:03	leeyaa	is function function_name () { some old format thing? im used to just function_name () { ?
+2014-10-24 13:59:20	leeyaa	i am asking because one of my scripts is running fine on older bash, and on newer bash it fails
+2014-10-24 13:59:44	lhunath	you should use either 'function name' or 'name()'
+2014-10-24 13:59:48	<--	ivanshmakov (~ivanshmak@2a02:2560:6d4:26ca::1:1d) has quit (Read error: Connection reset by peer)
+2014-10-24 13:59:53	lhunath	the latter is generally preferrede.
+2014-10-24 14:00:06	leeyaa	why then the older script has example: function update_with_latest_revision() {
+2014-10-24 14:00:12	leeyaa	and that one fails
+2014-10-24 14:00:20	leeyaa	if i use just update_with_latest_revision() { it doesnt
+2014-10-24 14:00:21	lhunath	because someone wrote it like that?
+2014-10-24 14:00:38	lhunath	yes, don't use BOTH 'function' AND '()'
+2014-10-24 14:00:45	leeyaa	hm
+2014-10-24 14:00:51	-->	ivanshmakov (~ivanshmak@2a02:2560:6d4:26ca::1:1d) has joined #bash
+2014-10-24 14:00:52	<--	mdih (~dvillamer@112.207.158.135) has quit (Ping timeout: 258 seconds)
+2014-10-24 14:00:58	leeyaa	then older bash must be more forgivable because script is written with both
+2014-10-24 14:01:15	leeyaa	ill change all to just name () {
+2014-10-24 14:01:16	leeyaa	thanks
+2014-10-24 14:01:18	lhunath	must be.
+2014-10-24 14:01:26	osse	maybe one of the older bash or newer bash is not in fact bash
+2014-10-24 14:01:57	<--	helgikrs3 (~helgikrs@89.17.128.56) has quit (Ping timeout: 255 seconds)
+2014-10-24 14:02:12	<--	emg (~emg@74.217.148.5) has quit (Quit: emg)
+2014-10-24 14:02:13	leeyaa	well its sh
+2014-10-24 14:02:20	leeyaa	but im using sh on both
+2014-10-24 14:02:25	lhunath	...
+2014-10-24 14:02:34	leeyaa	lhunath: i know ;p
+2014-10-24 14:02:37	lhunath	function is not even valid in POSIX sh.
+2014-10-24 14:02:52	lhunath	please SPECIFY if you are NOT using bash for your #bash question.
+2014-10-24 14:03:31	-->	wng_z3r0 (~wng_z3r0@about/windows/regular/wngz3r0) has joined #bash
+2014-10-24 14:04:11	-->	thekey (~thekey@50-202-79-166-static.hfc.comcastbusiness.net) has joined #bash
+2014-10-24 14:04:32	dualbus	then you lied, because you said: 'and on newer bash it fails', sh is not newer bash
+2014-10-24 14:05:00	lhunath	it could be bash with an sh mask on, which, of course, isn't actually bash anymore.
+2014-10-24 14:05:32	leeyaa	sorry about the confusion. i started rewritting the thing with bash and didnt notice the old version is using sh
+2014-10-24 14:05:59	-->	emg (~emg@74.217.148.5) has joined #bash
+2014-10-24 14:06:39	-->	winem_ (~quassel@37.80.11.114) has joined #bash
+2014-10-24 14:07:18	codehotter	In https://gist.github.com/codehotter/18b947f32e2882bd004e am I using the right syntax to capture something in a script that runs on the remote server?
+2014-10-24 14:07:21	<--	AntonioRibeiro (~AntonioRi@186.203.231.30) has quit (Ping timeout: 255 seconds)
+2014-10-24 14:07:22	-->	wroathe (~wroathe@c-50-188-42-86.hsd1.mn.comcast.net) has joined #bash
+2014-10-24 14:07:22	<--	dop (~dop@host109-149-246-242.range109-149.btcentralplus.com) has quit (Ping timeout: 272 seconds)
+2014-10-24 14:07:31	codehotter	What sometimes happens is that the program just exits, I think because read does not get EOF, but I don't understand why it wouldn't
+2014-10-24 14:07:35	codehotter	(I have -o errexit on)
+2014-10-24 14:07:46	<--	hellangel7 (~hellangel@117.221.125.248) has quit (Remote host closed the connection)
+2014-10-24 14:08:17	-->	queretaro (~queretaro@50.Red-217-127-120.staticIP.rima-tde.net) has joined #bash
+2014-10-24 14:08:23	emg	!set-e
+2014-10-24 14:08:24	greybot	"set -e" tells bash to abort the execution of the script when an unchecked command fails. A command is checked when it is in an if, while, until, &&, || or ! check. Also see !faq 105
+2014-10-24 14:08:30	emg	!faq 105
+2014-10-24 14:08:30	greybot	http://mywiki.wooledge.org/BashFAQ/105 -- Why doesn't set -e (or set -o errexit, or trap ERR) do what I expected?
+2014-10-24 14:08:39	-->	dop (~dop@5.153.234.122) has joined #bash
+2014-10-24 14:08:41	emg	codehotter: I highly recommend not using set -e
+2014-10-24 14:09:00	codehotter	emg: really? why?
+2014-10-24 14:09:14	emg	codehotter: read that faq ^^
+2014-10-24 14:09:25	codehotter	I have
+2014-10-24 14:09:35	emg	and you're still using set -e?
+2014-10-24 14:09:43	codehotter	yes.
+2014-10-24 14:09:45	emg	ok
+2014-10-24 14:10:06	codehotter	Anyway, my question is why wouldn't read get EOF in https://gist.github.com/codehotter/18b947f32e2882bd004e ?
+2014-10-24 14:10:34	codehotter	I must confess I don't really get why it would normally get EOF or what is sending the EOF and so I don't undestand why it doesn't work on FD3 or with ssh
+2014-10-24 14:11:02	codehotter	I confirmed that nothing else is using fd3
+2014-10-24 14:11:05	codehotter	so that wasn't it
+2014-10-24 14:12:41	<--	wroathe (~wroathe@c-50-188-42-86.hsd1.mn.comcast.net) has quit (Ping timeout: 250 seconds)
+2014-10-24 14:13:51	codehotter	I figured it might help if I close the file descriptor. so exec 1>&- or 3>&-, but it didn't.
+2014-10-24 14:13:57	-->	dreamon (~dreamon@unaffiliated/dreamon) has joined #bash
+2014-10-24 14:14:29	codehotter	is it because of the <() syntax?
+2014-10-24 14:14:38	-->	todd_dsm (~todd_dsm@173-29-159-188.client.mchsi.com) has joined #bash
+2014-10-24 14:14:45	<--	todd_dsm (~todd_dsm@173-29-159-188.client.mchsi.com) has quit (Remote host closed the connection)
+2014-10-24 14:15:03	codehotter	< <() just creates a pipe and connects it to stdin, right? it's as if I did command | read, only that read is running my current shell instead of a subshell
+2014-10-24 14:15:14	-->	gatopan (~Ivan@131.72.229.10) has joined #bash
+2014-10-24 14:15:25	codehotter	so when ssh exits, it closes its stdout, and then means read gets EOF on stdin, right?
+2014-10-24 14:16:09	koala_man	codehotter: are you running commands in the background?
+2014-10-24 14:16:11	-->	bido (~bido@50.252.106.22) has joined #bash
+2014-10-24 14:16:46	koala_man	!faq ssh > could explain it
+2014-10-24 14:16:46	greybot	could explain it: http://mywiki.wooledge.org/BashFAQ/063 -- My ssh client hangs when I try to logout after running a remote background job!
+2014-10-24 14:17:25	codehotter	koala_man: no, I'm not. Also, I can confirm that ssh exits. In fact, my whole script exits (although I don't get a prompt). If I press enter, I get a prompt.
+2014-10-24 14:17:25	-->	AntonioRibeiro (~AntonioRi@186.228.117.16) has joined #bash
+2014-10-24 14:17:31	codehotter	I think it exits because read does not return 0
+2014-10-24 14:18:00	codehotter	wait, The return code is zero, UNLESS end-of-file is encountered
+2014-10-24 14:18:02	codehotter	I'm dumb.
+2014-10-24 14:18:07	tb01110100	Any particular reason this would not work? "tail -n 0 -f <file> | grep "<regexstuff>" | while read -r line; do notify-send "$(echo $line | cut -d" " -f3 | tr -d "<>")""
+2014-10-24 14:18:13	codehotter	but I still don't understand it, because \n is sent before EOF
+2014-10-24 14:18:19	koala_man	codehotter: the bash-"$-" part is just a typo, right?
+2014-10-24 14:18:20	codehotter	so read shoudl stop reading and still return 0
+2014-10-24 14:18:25	codehotter	koala_man: no, it's not, why?
+2014-10-24 14:18:38	koala_man	# bash-"$-"
+2014-10-24 14:18:39	shbot	koala_man: bash: bash-himB: command not found
+2014-10-24 14:18:53	codehotter	koala_man: oh yea, sorry tehre's a space
+2014-10-24 14:19:26	<--	gatopan (~Ivan@131.72.229.10) has quit (Quit: WeeChat 1.0)
+2014-10-24 14:19:45	<--	marmelade (~opera@dslb-178-004-086-045.178.004.pools.vodafone-ip.de) has quit (Quit: marmelade)
+2014-10-24 14:20:07	<--	muellejo (~muellejo@p4FEA9981.dip0.t-ipconnect.de) has quit (Quit: Terminated with extreme prejudice - dircproxy 1.0.5)
+2014-10-24 14:20:46	-->	KnightsWhoSayNi (~haz@141.170.15.4) has joined #bash
+2014-10-24 14:21:41	<--	Nili (~udev@unaffiliated/crunchernil) has quit (Quit: WeeChat 1.0.1)
+2014-10-24 14:21:44	-->	Sample (~Sample@unaffiliated/sample) has joined #bash
+2014-10-24 14:22:39	dualbus	!faq buffering > tb01110100
+2014-10-24 14:22:39	greybot	tb01110100: http://mywiki.wooledge.org/BashFAQ/009 -- What is buffering?  Or, why does my command line produce no output: tail -f logfile | grep 'foo bar' | awk ...
+2014-10-24 14:22:57	<--	m0viefreak (~asdf@unaffiliated/m0viefreak) has quit (Ping timeout: 260 seconds)
+2014-10-24 14:23:11	koala_man	codehotter: instead of 'read port', try 'cat' and see what it outputs
+2014-10-24 14:23:13	<--	Sauvin (~Sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2014-10-24 14:24:04	--	kpease is now known as kpease_
+2014-10-24 14:24:13	<--	bido (~bido@50.252.106.22) has quit (Remote host closed the connection)
+2014-10-24 14:24:18	<--	tier (~tier@c-73-175-104-12.hsd1.pa.comcast.net) has quit (Remote host closed the connection)
+2014-10-24 14:25:23	<--	kpease_ (~kpease@72.22.182.162) has quit
+2014-10-24 14:26:27	Zap-W	should I always check $? with (( $? == 1 ))  or it dosen't matter if I use [[ $? = 1 ]]
+2014-10-24 14:26:30	-->	kpease (~kpease@72.22.182.162) has joined #bash
+2014-10-24 14:26:41	codehotter	koala_man: nothing! what?!
+2014-10-24 14:26:50	codehotter	koala_man: awesome tip
+2014-10-24 14:26:57	codehotter	gives me a direction to look in
+2014-10-24 14:27:01	<--	cybrNaut (cybrNaut@2001:0:53aa:64c:30db:ab9:bcca:66c4) has quit (Ping timeout: 272 seconds)
+2014-10-24 14:27:57	<--	mitz_ (~mitz@113.161.65.219) has quit (Ping timeout: 265 seconds)
+2014-10-24 14:28:32	<--	wonderworld (~ww@ip-62-143-157-238.hsi01.unitymediagroup.de) has quit (Remote host closed the connection)
+2014-10-24 14:29:49	codehotter	Zap-W: I'm not entirely sure, but I think you use (( .. )) for numbers and [[ .. ]] for strings and other tests. With (( .. )) you could do if (( ? == 1 )), but you need the ==
+2014-10-24 14:30:08	-->	Michael___ (~quassel@dre161.neoplus.adsl.tpnet.pl) has joined #bash
+2014-10-24 14:30:14	-->	cybrNaut (cybrNaut@2001:0:53aa:64c:30db:ab9:bcca:66c4) has joined #bash
+2014-10-24 14:30:46	codehotter	I think it still works if you use [[ ]] though
+2014-10-24 14:32:12	-->	Alex-SF (~Alex-SF@64.125.69.200) has joined #bash
+2014-10-24 14:33:08	-->	melik (~melik@207.7.150.12) has joined #bash
+2014-10-24 14:33:28	-->	tier (~tier@c-73-175-104-12.hsd1.pa.comcast.net) has joined #bash
+2014-10-24 14:33:45	-->	wcfields (~keynull@209.36.40.50) has joined #bash
+2014-10-24 14:34:10	-->	talsamon_ (~talsamon@91-115-90-106.adsl.highway.telekom.at) has joined #bash
+2014-10-24 14:34:42	-->	dreamcat4 (~dreamcat4@62.49.10.153) has joined #bash
+2014-10-24 14:35:18	-->	hobodave (~hobodave@pdpc/supporter/professional/hobodave) has joined #bash
+2014-10-24 14:35:23	<--	winem_ (~quassel@37.80.11.114) has quit (Remote host closed the connection)
+2014-10-24 14:36:01	<--	scroat (44572a6e@gateway/web/cgi-irc/kiwiirc.com/ip.68.87.42.110) has quit (Ping timeout: 260 seconds)
+2014-10-24 14:36:08	<--	cybrNaut (cybrNaut@2001:0:53aa:64c:30db:ab9:bcca:66c4) has quit (Ping timeout: 258 seconds)
+2014-10-24 14:36:09	dualbus	Zap-W: neither
+2014-10-24 14:36:12	dualbus	!if
+2014-10-24 14:36:13	greybot	See: http://mywiki.wooledge.org/BashGuide/TestsAndConditionals#Conditional_Blocks and http://wiki.bash-hackers.org/syntax/ccmd/if_clause
+2014-10-24 14:36:34	<--	talsamon_ (~talsamon@91-115-90-106.adsl.highway.telekom.at) has quit (Client Quit)
+2014-10-24 14:36:35	dualbus	Zap-W: just test directly: if somecommand; then ...; else ...; fi
+2014-10-24 14:36:44	-->	cybrNaut (cybrNaut@2001:0:53aa:64c:30db:ab9:bcca:66c4) has joined #bash
+2014-10-24 14:36:56	dualbus	$? shouldn't be used to test 0/non-0 exit codes
+2014-10-24 14:38:16	--	poeticrpm is now known as mossad
+2014-10-24 14:38:19	--	tb01110100 is now known as NSA
+2014-10-24 14:38:28	--	mossad is now known as poeticrpm
+2014-10-24 14:39:39	-->	bido (~bido@50.252.106.22) has joined #bash
+2014-10-24 14:40:17	<--	FooMunki (~FooMunki_@host-80-43-129-94.as13285.net) has quit (Quit: FooMunki)
+2014-10-24 14:40:26	<--	FreezingCold (~FreezingC@CPE602ad06bea2a-CM602ad06bea27.cpe.net.cable.rogers.com) has quit (Quit: Out)
+2014-10-24 14:40:42	-->	FreezingCold (~FreezingC@135.0.41.14) has joined #bash
+2014-10-24 14:41:16	<--	mweckbecker (~mweckbeck@62.245.161.253) has quit (Quit: Konversation terminated!)
+2014-10-24 14:41:20	codehotter	if I run command; command2; command 3, am I guaranteed to see command's stderr output before I see command2's and command3's?
+2014-10-24 14:41:57	codehotter	what about when I do read var < <(command); command2?
+2014-10-24 14:43:46	-->	bizarro_1 (~bizarro_1@23.Red-83-47-139.dynamicIP.rima-tde.net) has joined #bash
+2014-10-24 14:45:49	-->	Nili (~udev@unaffiliated/crunchernil) has joined #bash
+2014-10-24 14:46:03	koala_man	# read var < <(echo foo; sleep 1; echo "command's stderr" >&2); echo "command2 stdout"
+2014-10-24 14:46:04	shbot	koala_man: command2 stdout
+2014-10-24 14:46:09	codehotter	I guess read already terminated so the script goes to command2, but command did not necessarily complete yet, so it may not yet have flushed its out buffers
+2014-10-24 14:46:10	Zap-W	dualbus: I am not using it for no reason. this program is special it returns different exit codes and I writing an if codition based on the exit code it is returning
+2014-10-24 14:46:13	koala_man	# read var < <(echo foo; sleep 1; echo "command's stderr" >&2); echo "command2 stdout"; sleep 3
+2014-10-24 14:46:17	shbot	koala_man: command2 stdout
+2014-10-24 14:46:17	shbot	koala_man: command's stderr
+2014-10-24 14:46:23	koala_man	codehotter: nope ^
+2014-10-24 14:46:41	codehotter	koala_man: right, not guaranteed
+2014-10-24 14:46:50	-->	Penguiniator (~scott@unaffiliated/penguiniator) has joined #bash
+2014-10-24 14:46:55	codehotter	so how do I get ordered output if that's important to me?
+2014-10-24 14:46:59	<--	somerandomnick12 (~a@gatej.thls.bbc.co.uk) has quit (Quit: This computer has gone to sleep)
+2014-10-24 14:47:22	codehotter	can I somehow wait for the command in <() to exit before continuing to the next line?
+2014-10-24 14:47:34	koala_man	I don't know of a simple way of doing that
+2014-10-24 14:48:01	koala_man	in your particular case I guess you could do { read var; cat > /dev/null; } < <(...)
+2014-10-24 14:48:17	koala_man	to make it keep reading all stdout
+2014-10-24 14:49:32	<--	maniacal (~maniacal@208.99.166.84) has quit (Remote host closed the connection)
+2014-10-24 14:49:59	codehotter	this getting hackier and hackier
+2014-10-24 14:50:09	codehotter	all I wanted was to run some commands on the remote server and capture some of its output
+2014-10-24 14:50:11	codehotter	=(
+2014-10-24 14:50:53	--	NSA is now known as tb01110100
+2014-10-24 14:51:29	<--	}ls{ (~uhelp@unaffiliated/ls/x-8089558) has quit (Ping timeout: 245 seconds)
+2014-10-24 14:51:43	-->	srcerer (~chatzilla@dns2.klsairexpress.com) has joined #bash
+2014-10-24 14:51:59	-->	heiner (~heiner@p5085786E.dip0.t-ipconnect.de) has joined #bash
+2014-10-24 14:52:16	codehotter	koala_man: it works though......... ... .. can I really commit it like this? lol
+2014-10-24 14:52:33	codehotter	maybe I should use $() instead of < <()?
+2014-10-24 14:52:47	codehotter	I'm subshelling now anyway. so there's no harm. Right?
+2014-10-24 14:53:14	codehotter	or does {} not cause a subshell?
+2014-10-24 14:53:58	TommyC	codehotter: You mean like: foo() { ... } or do you mean like: if ((x == 0)) { ... } ?
+2014-10-24 14:54:16	koala_man	codehotter: I don't know what you're trying to do
+2014-10-24 14:54:17	geirha	only groups commands, no subshell
+2014-10-24 14:54:27	codehotter	ok
+2014-10-24 14:54:29	codehotter	what about $() ?
+2014-10-24 14:54:30	koala_man	codehotter: if you just want the output of your command, you should definitely be doing $()
+2014-10-24 14:54:38	TommyC	$() produces a subshell iirc
+2014-10-24 14:54:39	-->	Errorical (~Errorical@83.243.255.36) has joined #bash
+2014-10-24 14:54:40	-->	K4k (~K4k@unaffiliated/k4k) has joined #bash
+2014-10-24 14:55:00	codehotter	koala_man: I want to A) run some commands on the remote server B) return some information back to the local script after it is done.
+2014-10-24 14:55:20	<--	heiner_ (~heiner@p5B3FF31F.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2014-10-24 14:55:29	codehotter	To capture the output of a comand into variable I learned to do read variable < <(command).
+2014-10-24 14:55:35	<--	queretaro (~queretaro@50.Red-217-127-120.staticIP.rima-tde.net) has quit
+2014-10-24 14:55:35	muranese	# fun0() { echo $var; }; fun1() { local var; var=0; fun0; }
+2014-10-24 14:55:36	shbot	muranese: no output
+2014-10-24 14:55:39	-->	jthunder (~jthunder@70.28.245.100) has joined #bash
+2014-10-24 14:55:51	koala_man	codehotter: oh. yeah, that's wrong on many levels. it's supposed to be variable=$(command)
+2014-10-24 14:56:06	geirha	codehotter: that's if it's only one line of output, since read only reads one line at a time
+2014-10-24 14:56:08	muranese	fun0 is not a children of fun1 in that case?
+2014-10-24 14:56:08	-->	TinkerTyper (~TinkerTyp@cpe-066-057-003-088.nc.res.rr.com) has joined #bash
+2014-10-24 14:56:14	codehotter	geirha: yea, it is only one line of output!
+2014-10-24 14:56:44	<--	Michael___ (~quassel@dre161.neoplus.adsl.tpnet.pl) has quit (Remote host closed the connection)
+2014-10-24 14:56:47	koala_man	that's if you only want the first line of output with escape sequences interpretted and leading and trailing whitespace skipped
+2014-10-24 14:56:51	koala_man	if you want output of a command, use $()
+2014-10-24 14:56:56	codehotter	But the problem is, the ordering of messages on my terminal is all messed up, because read already returned, but command inside < <(...) has not flushed yet
+2014-10-24 14:57:12	<--	Alex-SF (~Alex-SF@64.125.69.200) has quit (Quit: Alex-SF)
+2014-10-24 14:57:14	codehotter	yea I know about read -r, In this case, I'm 100% sure there is no escape sequences in the output
+2014-10-24 14:57:15	muranese	because help show "Local variables can only be used within a function; they are visible only to the function where they are defined and its children."
+2014-10-24 14:57:32	codehotter	and I want trailing whitespace skipped, does $() capture \n?
+2014-10-24 14:57:36	geirha	codehotter: well, then the main difference is that with read < <(cmd), cmd is run in the background, while with $(cmd), bash waits for it to complete before continuing
+2014-10-24 14:57:47	-->	maniacal (~maniacal@208.99.166.84) has joined #bash
+2014-10-24 14:57:59	geirha	$() removes trailing newlines, yes
+2014-10-24 14:58:10	-->	apparle (~quassel@cpe-174-109-074-132.nc.res.rr.com) has joined #bash
+2014-10-24 14:58:14	codehotter	oh, that's awesome then. I'll just use $()
+2014-10-24 14:58:21	geirha	# var=$(echo foo; echo; echo); declare -p var
+2014-10-24 14:58:22	shbot	geirha: declare -- var="foo"
+2014-10-24 14:58:34	-->	DammitJim (~DammitJim@173.227.148.6) has joined #bash
+2014-10-24 14:58:38	-->	paulfm_ (~paulfm@162.222.47.218) has joined #bash
+2014-10-24 14:59:09	codehotter	so $() produce subshell? Is that bad? Is that a reason to prefer < <() ?
+2014-10-24 14:59:14	codehotter	or doesnt really matter
+2014-10-24 14:59:57	lhunath	both create a subshell.
+2014-10-24 15:00:11	<--	paulfm (~paulfm@162.222.47.218) has quit (Ping timeout: 245 seconds)
+2014-10-24 15:00:32	codehotter	oh, never mind then :P
+2014-10-24 15:00:40	<--	heiner (~heiner@p5085786E.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2014-10-24 15:00:48	codehotter	does A | B | C create a subshell?
+2014-10-24 15:00:56	lhunath	several.
+2014-10-24 15:01:04	codehotter	OK
+2014-10-24 15:01:06	Zap-W	what's the \t is for tab what to use for backspace?
+2014-10-24 15:01:13	Zap-W	\b ?
+2014-10-24 15:01:22	<--	crystal77 (~crystal77@66.162.212.19) has quit (Quit: Computer has gone to sleep.)
+2014-10-24 15:01:28	-->	haarg (haarg@haarg.org) has joined #bash
+2014-10-24 15:01:32	codehotter	I don't think backspace is good anymore in this meta I would go for token miracle
+2014-10-24 15:01:34	lhunath	yes.
+2014-10-24 15:02:29	<--	jraglin (~jraglin@67.239.194.99) has quit (Quit: Lost terminal)
+2014-10-24 15:02:59	Zap-W	does bash  pass "" as argument to command?
+2014-10-24 15:03:15	-->	zacts- (~AndChat41@freebsd/geek/zacts) has joined #bash
+2014-10-24 15:03:34	<--	peterv (~peterv@79.164.169.89) has quit (Ping timeout: 244 seconds)
+2014-10-24 15:03:35	koala_man	Zap-W: "" would be passed as an empty string, yes
+2014-10-24 15:03:41	Zap-W	ok
+2014-10-24 15:04:15	<--	rawl (~rawlbot@104-54-198-27.lightspeed.austtx.sbcglobal.net) has quit (Quit: rawl)
+2014-10-24 15:04:15	-->	peterv (~peterv@79.164.169.89) has joined #bash
+2014-10-24 15:04:51	KnightsWhoSayNi	That's it guys, I don't want to live on this planet anymore: "count=`ls -1d [0-9]* | sort -rn | wc -l`"
+2014-10-24 15:05:28	geirha	easier to count if we sort it first!
+2014-10-24 15:05:33	KnightsWhoSayNi	:D
+2014-10-24 15:06:15	-->	cat_pants (~kerry@209.189.196.1) has joined #bash
+2014-10-24 15:06:50	-->	mikeg (~maniacal@ec2-54-164-223-104.compute-1.amazonaws.com) has joined #bash
+2014-10-24 15:09:59	<--	maniacal (~maniacal@208.99.166.84) has quit (Ping timeout: 244 seconds)
+2014-10-24 15:10:30	<--	ruukasu (~ruukasu@unaffiliated/ruukasu) has quit (Ping timeout: 244 seconds)
+2014-10-24 15:12:00	<--	FernandoBasso (~FernandoB@189.27.179.207.dynamic.adsl.gvt.net.br) has quit (Quit: WeeChat 1.0.1)
+2014-10-24 15:12:11	<--	blizzow (~jburns@50.243.148.102) has quit (Remote host closed the connection)
+2014-10-24 15:12:56	-->	deekej (~deekej@195.65.3.245) has joined #bash
+2014-10-24 15:14:02	<--	apparle (~quassel@cpe-174-109-074-132.nc.res.rr.com) has quit (Ping timeout: 256 seconds)
+2014-10-24 15:15:34	<--	kawahi (~kawahi@5.101.148.159) has quit (Quit: kawahi)
+2014-10-24 15:15:51	<--	Abd_Allatif (~abd@unaffiliated/abd-allatif/x-6736565) has quit (Quit: Konversation terminated!)
+2014-10-24 15:15:58	-->	shai (~Shai@l192-117-110-233.cable.actcom.net.il) has joined #bash
+2014-10-24 15:16:39	--	irc: disconnected from server

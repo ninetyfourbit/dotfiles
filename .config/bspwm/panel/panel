@@ -1,0 +1,33 @@
+#! /bin/sh
+
+if [ $(pgrep -cx panel) -gt 1 ] ; then
+	printf "%s\n" "The panel is already running." >&2
+	exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+flavor=${1:-bar}
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+bspc config top_padding $PANEL_HEIGHT
+
+bspc control --subscribe > "$PANEL_FIFO" &
+xtitle -sf 'T%s' > "$PANEL_FIFO" &
+clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
+
+. /home/rlee/scripts/panel_colors-${flavor}
+
+case "$flavor" in
+	bar)
+	    FONT_FAMILY='-*-gohufont-*-*-normal-*-11-*-*-*-*-*-*-1'
+		#FONT_FAMILY='-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1'
+		#FONT_FAMILY='-*-uushi-*-r-normal-*-11-*-*-*-*-*-*-1'
+		#FONT_FAMILY='-*-neep-medium-r-semicondensed-*-11-*-*-*-c-*-*-*'
+		cat "$PANEL_FIFO" | /home/rlee/scripts/panel_bar | bar -g x$PANEL_HEIGHT -f "$FONT_FAMILY" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" &
+		;;
+esac
+
+wait

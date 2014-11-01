@@ -1,0 +1,83 @@
+2014-10-24 17:51:50	--	irc: connecting to server irc.freenode.net/6667...
+2014-10-24 17:51:51	--	irc: connected to irc.freenode.net/6667 (185.30.166.38)
+2014-10-24 17:51:51	--	orwell.freenode.net: *** Looking up your hostname...
+2014-10-24 17:51:51	--	orwell.freenode.net: *** Checking Ident
+2014-10-24 17:51:51	--	orwell.freenode.net: *** Couldn't look up your hostname
+2014-10-24 17:51:57	--	orwell.freenode.net: *** No Ident response
+2014-10-24 17:51:57	--	Welcome to the freenode Internet Relay Chat Network rlee
+2014-10-24 17:51:57	--	Your host is orwell.freenode.net[185.30.166.38/6667], running version ircd-seven-1.1.3
+2014-10-24 17:51:57	--	This server was created Sat Feb 22 2014 at 16:03:54 BRT
+2014-10-24 17:51:57	--	orwell.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2014-10-24 17:51:57	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2014-10-24 17:51:57	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2014-10-24 17:51:57	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2014-10-24 17:51:57	--	There are 174 users and 89272 invisible on 30 servers
+2014-10-24 17:51:57	--	31 :IRC Operators online
+2014-10-24 17:51:57	--	7 :unknown connection(s)
+2014-10-24 17:51:57	--	57668 :channels formed
+2014-10-24 17:51:57	--	I have 7839 clients and 2 servers
+2014-10-24 17:51:57	--	7839 15001 :Current local users 7839, max 15001
+2014-10-24 17:51:57	--	89446 104047 :Current global users 89446, max 104047
+2014-10-24 17:51:57	--	Highest connection count: 15002 (15001 clients) (1683395 connections received)
+2014-10-24 17:51:57	--	- orwell.freenode.net Message of the Day -
+2014-10-24 17:51:57	--	- Welcome to orwell.freenode.net in Amsterdam, NL.
+2014-10-24 17:51:57	--	- Thanks to http://www.hyperfilter.com/ for sponsoring
+2014-10-24 17:51:57	--	- this server!
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- ORWELL, GEORGE [1903 - 1950] Born in India, his mother
+2014-10-24 17:51:57	--	- moved him to England when he was one year old, and it
+2014-10-24 17:51:57	--	- was in England where he was educated and spent most of
+2014-10-24 17:51:57	--	- his life.  Orwell is perhaps best known for his novels
+2014-10-24 17:51:57	--	- Nineteen Eighty-Four and Animal Farm.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- Welcome to freenode - supporting the free and open source
+2014-10-24 17:51:57	--	- software communities since 1998.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- **************************************************************
+2014-10-24 17:51:57	--	-                       SECURITY ALERT
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- Over the weekend of 13th-14th September freenode staff noticed
+2014-10-24 17:51:57	--	- some compromised binaries present on a number of servers.
+2014-10-24 17:51:57	--	- The servers in question have been removed from the network and
+2014-10-24 17:51:57	--	- shut down.  However, it's possible that network traffic  -
+2014-10-24 17:51:57	--	- including SSL traffic - has been sniffed and passwords
+2014-10-24 17:51:57	--	- exposed.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- We therefore recommend that all users change their nickserv
+2014-10-24 17:51:57	--	- password(s) to a new value which is not shared with any
+2014-10-24 17:51:57	--	- other service.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- You can do this with /msg nickserv set password newpasshere
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- Please note that investigation is ongoing to discover the root
+2014-10-24 17:51:57	--	- cause of the attack, and until this investigation is complete
+2014-10-24 17:51:57	--	- we cannot be 100% certain that all traces of the compromises
+2014-10-24 17:51:57	--	- have been removed. We may have to ask you to change your
+2014-10-24 17:51:57	--	- passwords again after analysis has completed.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- Further details will appear on https://blog.freenode.net/
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- **************************************************************
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- By connecting to freenode you indicate that you have read and
+2014-10-24 17:51:57	--	- accept our policies as set out on http://www.freenode.net
+2014-10-24 17:51:57	--	- freenode runs an open proxy scanner. Please join #freenode for
+2014-10-24 17:51:57	--	- any network-related questions or queries, where a number of
+2014-10-24 17:51:57	--	- volunteer staff and helpful users will be happy to assist you.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2014-10-24 17:51:57	--	- together with like-minded FOSS enthusiasts for talks and
+2014-10-24 17:51:57	--	- real-life collaboration.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- We would like to thank Private Internet Access
+2014-10-24 17:51:57	--	- (https://www.privateinternetaccess.com/) and the other
+2014-10-24 17:51:57	--	- organisations that help keep freenode and our other projects
+2014-10-24 17:51:57	--	- running for their sustained support.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	- In particular we would like to thank the sponsor
+2014-10-24 17:51:57	--	- of this server, details of which can be found above.
+2014-10-24 17:51:57	--	-
+2014-10-24 17:51:57	--	End of /MOTD command.
+2014-10-24 17:51:57	--	User mode [+i] by rlee
+2014-10-24 17:52:11	--	irc: disconnected from server

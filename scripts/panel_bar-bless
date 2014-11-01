@@ -1,0 +1,115 @@
+#! /bin/sh
+
+WHITE=#FFC0B18B
+DARK=#FF1F1F1F
+LIGHT=#FF688aad
+
+workspace(){
+	SPACE_NUM=$(bspc query -D -d);
+		case "$SPACE_NUM" in
+			"1")
+				WORKSPACE="■ □ □ □ □";;
+			"2")
+				WORKSPACE="□ ■ □ □ □";;
+			"3")
+				WORKSPACE="□ □ ■ □ □";;
+			"4")
+				WORKSPACE="□ □ □ ■ □";;
+			"5")
+				WORKSPACE="□ □ □ □ ■";;
+		esac
+	echo -n $WORKSPACE
+}
+
+chg(){
+	echo -n  $(acpi --battery | awk '{gsub(/,/, "");} {print $4}')
+}
+
+bat(){ 
+	echo -n  $(acpi -a | if grep -q "on-line"; then echo -n ""; else echo -n "⭫ $(chg)%"; fi)
+}
+
+ram(){
+	echo -n  $(free -m | awk '/-/ {print $3}')
+}
+
+dat(){
+	echo -n  $(date "+%H:%M  %D")
+}
+
+vol(){
+	echo -n  $(amixer | if grep -q "off"; then echo -n "mute"; else echo -n $(amixer | awk '/Front Left: Playback/ {print $5}' | sed 's/\[//g;s/\]//g');fi)
+}
+
+mus(){
+	echo -n  $(test -z "$(mpc current)" || mpc current -f %title%)
+	#echo -n $(ps aux | grep -v "grep" | if grep -q "cmus"; then echo $(cmus-remote -Q | sed -n 's/tag title //p'); else echo "n/a"; fi)
+}
+
+paws(){
+	echo -n  $(mpc | if grep -q "paused"; then echo -n "▮▮"; else echo -n "♫"; fi)
+	#echo -n $(cmus-remote -Q | if grep -q "paused"; then echo -n "▮▮"; else echo -n "♫"; fi)
+}
+
+while :; do
+	printf "%s\n" "%{A:mpc toggle:}%{B$DARK} %{F$WHITE}$(paws) %{F$DARK}%{B$LIGHT}%{A}%{A:osd:}%{F-}%{B-}%{F$WHITE}%{B$LIGHT} $(mus) %{B-}%{F-}%{F$LIGHT}%{B-}%{A}%{c}%{B$DARK}%{F$WHITE}%{B-}%{F-}%{B$DARK} %{F$WHITE}$(workspace) %{B-}%{F-}%{F$WHITE}%{B$DARK}%{B-}%{F-}%{c}%{r}%{F$LIGHT}%{F-}%{B$LIGHT}%{F$WHITE} $(bat) ram $(ram) vol $(vol)% %{B-}%{F-}%{F$DARK}%{B$LIGHT}%{F-}%{B-}%{B$DARK}%{F$WHITE} $(dat) %{B-}%{F-}"
+sleep 1
+done
+
+#. /home/rlee/scripts/panel_colors-bar
+#
+#while read -r line ; do
+#	case $line in
+#		S*)
+#			# clock output
+#			sys_infos="%{F$COLOR_STATUS_FG}%{B$COLOR_STATUS_BG}${line#?}"
+#			;;
+#		T*)
+#			# xtitle output
+#			title="%{F$COLOR_TITLE_FG}%{B$COLOR_TITLE_BG}${line#?}"
+#			;;
+#		W*)
+#			# bspwm internal state
+#			wm_infos=""
+#			IFS=':'
+#			set -- ${line#?}
+#			while [ $# -gt 0 ] ; do
+#				item=$1
+#				name=${item#?}
+#				case $item in
+#					O*)
+#						# focused occupied desktop
+#						wm_infos="$wm_infos %{F$COLOR_FOCUSED_OCCUPIED_FG}%{B$COLOR_FOCUSED_OCCUPIED_BG}%{U$COLOR_FOREGROUND}%{+u}${name}%{-u}"
+#						;;
+#					F*)
+#						# focused free desktop
+#						wm_infos="$wm_infos %{F$COLOR_FOCUSED_FREE_FG}%{B$COLOR_FOCUSED_FREE_BG}%{U$COLOR_FOREGROUND}%{+u}${name}%{-u}"
+#						;;
+#					U*)
+#						# focused urgent desktop
+#						wm_infos="$wm_infos %{F$COLOR_FOCUSED_URGENT_FG}%{B$COLOR_FOCUSED_URGENT_BG}%{U$COLOR_FOREGROUND}%{+u}${name}%{-u}"
+#						;;
+#					o*)
+#						# occupied desktop
+#						wm_infos="$wm_infos %{F$COLOR_OCCUPIED_FG}%{B$COLOR_OCCUPIED_BG}${name}"
+#						;;
+#					f*)
+#						# free desktop
+#						wm_infos="$wm_infos %{F$COLOR_FREE_FG}%{B$COLOR_FREE_BG}${name}"
+#						;;
+#					u*)
+#						# urgent desktop
+#						wm_infos="$wm_infos %{F$COLOR_URGENT_FG}%{B$COLOR_URGENT_BG}${name}"
+#						;;
+#					L*)
+#						# layout
+#						layout=$(printf "%s" "${name}" | sed 's/\(.\).*/\U\1/')
+#						wm_infos="$wm_infos    %{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG}$layout"
+#						;;
+#				esac
+#				shift
+#			done
+#			;;
+#	esac
+#	printf "%s\n" "%{l} $wm_infos %{c} $title %{r} $sys_infos  "
+#done

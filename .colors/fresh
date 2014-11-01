@@ -1,0 +1,62 @@
+*foreground: #DDCCBB
+
+! Brown BG
+!*background: #30251D
+
+! Grey BG
+*background: #151515
+
+
+!black
+*color0:     #393939
+*color8:     #AF875F
+!red
+*color1:     #BF1E2D
+*color9:     #E7212A
+!green
+*color2:     #9DBA3A
+*color10:    #A9C938
+!yellow
+*color3:     #F5B915
+*color11:    #F7D325
+!blue
+*color4:     #1CA1DB
+*color12:    #00AFDA
+!magenta
+*color5:     #652F90
+*color13:    #894E9F
+!cyan
+*color6:     #EA7D24
+*color14:    #F79321
+!white
+*color7:     #E7E8E9
+*color15:    #F3F3F4
+
+!--urxvt-----
+
+!urxvt*font: 		-*-uushi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont:  	-*-uushi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: 	-*-uushi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: 	-*-uushi-medium-r-*-*-11-*-*-*-*-*-*-*
+
+!urxvt*font: 		-*-tewi-*-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont:  	-*-tewi-*-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: 	-*-tewi-*-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: 	-*-tewi-*-r-normal-*-11-*-*-*-*-*-*-*
+
+!urxvt*font: 		-*-gohufont-*-r-normal-*-11-80-100-*-c-60-*-1
+!urxvt*boldFont: 	-*-gohufont-*-r-normal-*-11-80-100-*-c-60-*-1
+!urxvt*italicFont: 	-*-gohufont-*-r-normal-*-11-80-100-*-c-60-*-1
+!urxvt*bolditalicFont: 	-*-gohufont-*-r-normal-*-11-80-100-*-c-60-*-1
+
+urxvt*font: 		-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*boldFont:  	-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*italicFont: 	-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*bolditalicFont: 	-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+
+urxvt*scrollBar: 	false
+urxvt*saveLines: 	4096
+urxvt*pointerBlank: 	true
+urxvt*colorIT:		#FAFAFA
+urxvt*colorBD:		#6D9EAC
+urxvt*colorUL:		#E04614

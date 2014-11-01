@@ -1,0 +1,95 @@
+!---terminal-colors----
+!---special-colors-----
+!*background: #424242
+!*foreground: #ffffff
+!----------------------
+! Black + Bright Black
+!*color0:  #242424
+!*color8:  #505050
+! Red + Bright Red
+!*color1:  #FF4F4F
+!*color9:  #FF0000
+! Green + Bright Green
+!*color2:  #64FF50
+!*color10: #0DFF00
+! Yellow + Bright Yellow
+!*color3:  #FFFA56
+!*color11: #FFF700
+! Blue + Bright Blue
+!*color4:  #5C61FF
+!*color12: #0008FF
+! Orange + Bright Orange
+!*color5:  #CE7A60
+!*color13: #E04614
+! Cyan + Bright Cyan
+!*color6:  #4FFFFF
+!*color14: #00FFFF
+! White + Bright White
+!*color7:  #DBDBDB
+!*color15: #FAFAFA
+!---------------------
+
+
+*background: #1f1f1f
+*foreground: #c0b18b
+
+!black
+*color0:#323232
+*color8:#323232
+
+!red
+*color1:#d17b49
+*color9:#d17b49
+
+!green
+*color2:#7b8748
+*color10:#7b8748
+
+!yellow
+*color3:#af865a
+*color11:#af865a
+
+!blue
+*color4:#535C5C
+*color12:#535C5C
+
+!magenta
+*color5:#775759
+*color13:#775759
+
+!cyan
+*color6:#6d715e
+*color14:#6d715e
+
+!white
+*color7:#c0b18b
+*color15:#c0b18b
+
+
+
+!---urxvt-------------
+
+urxvt.geometry:       90x24
+!urxvt*font:          gohufont-uni-11.pcf.gz
+!urxvt*font:           xft: Clean:size=8
+
+urxvt*font: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*boldFont: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*italicFont: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*bolditalicFont:-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+
+!urxvt*transparent:    true
+!urxvt*shading:        20
+!urxvt*fading:        20
+urxvt*scrollBar:      false
+urxvt*saveLines:      4096
+urxvt*pointerBlank:   true
+!urxvt*letterSpace:    +1
+urxvt.colorIT:        #FAFAFA
+urxvt.colorBD:        #6D9EAC
+urxvt.colorUL:        #E04614
+
+!---redundant-if-bspwm
+!urxvt.borderColor:    #FAFAFA  
+!urxvt.borderColor:    #DBC742
+!urxvt.internalBorder: 1

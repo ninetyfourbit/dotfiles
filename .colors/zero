@@ -1,0 +1,63 @@
+*.background: #1d1d1d
+*foreground: #c0b18b
+
+!black
+*color0:#4A3637
+*color8:#4A3637
+
+!red
+*color1:#d17b49
+*color9:#d17b49
+
+!green
+*color2:#7b8748
+*color10:#7b8748
+
+!yellow
+*color3:#af865a
+*color11:#af865a
+
+!blue
+*color4:#535C5C
+*color12:#535C5C
+
+!magenta
+*color5:#775759
+*color13:#775759
+
+!cyan
+*color6:#6d715e
+*color14:#6d715e
+
+!white
+*color7:#c0b18b
+*color15:#c0b18b
+
+!--urxvt-----
+
+!urxvt*font: 		-*-uushi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont:  	-*-uushi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: 	-*-uushi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: 	-*-uushi-medium-r-*-*-11-*-*-*-*-*-*-*
+
+!urxvt*font: 		-*-tewi-*-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont:  	-*-tewi-*-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: 	-*-tewi-*-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: 	-*-tewi-*-r-normal-*-11-*-*-*-*-*-*-*
+
+urxvt*font: 		-*-gohufont-*-r-normal-*-11-80-100-*-c-60-*-1
+urxvt*boldFont: 	-*-gohufont-*-r-normal-*-11-80-100-*-c-60-*-1
+urxvt*italicFont: 	-*-gohufont-*-r-normal-*-11-80-100-*-c-60-*-1
+urxvt*bolditalicFont: 	-*-gohufont-*-r-normal-*-11-80-100-*-c-60-*-1
+
+!urxvt*font: 		-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont:  	-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: 	-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: 	-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+
+urxvt*scrollBar: 	false
+urxvt*saveLines: 	4096
+urxvt*pointerBlank: 	true
+urxvt*colorIT:		#C0B18B
+urxvt*colorBD:		#D17B49
+urxvt*colorUL:		#775759

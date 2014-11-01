@@ -1,0 +1,30 @@
+2014-10-24 17:50:06	--	irc: connecting to server irc.freenode.net"/6667...
+2014-10-24 17:50:06	=!=	irc: address "irc.freenode.net"" not found
+2014-10-24 17:50:06	=!=	irc: error: Name or service not known
+2014-10-24 17:50:06	--	irc: switching address to "/6667
+2014-10-24 17:50:06	--	irc: connecting to server "/6667...
+2014-10-24 17:50:06	=!=	irc: address """ not found
+2014-10-24 17:50:06	=!=	irc: error: Name or service not known
+2014-10-24 17:50:06	--	irc: switching address to irc.freenode.net"/6667
+2014-10-24 17:50:06	--	irc: reconnecting to server in 10 seconds
+2014-10-24 17:50:16	--	irc: reconnecting to server...
+2014-10-24 17:50:16	--	irc: connecting to server irc.freenode.net"/6667...
+2014-10-24 17:50:16	=!=	irc: address "irc.freenode.net"" not found
+2014-10-24 17:50:16	=!=	irc: error: Name or service not known
+2014-10-24 17:50:16	--	irc: switching address to "/6667
+2014-10-24 17:50:16	--	irc: connecting to server "/6667...
+2014-10-24 17:50:16	=!=	irc: address """ not found
+2014-10-24 17:50:16	=!=	irc: error: Name or service not known
+2014-10-24 17:50:16	--	irc: switching address to irc.freenode.net"/6667
+2014-10-24 17:50:16	--	irc: reconnecting to server in 20 seconds
+2014-10-24 17:50:36	--	irc: reconnecting to server...
+2014-10-24 17:50:36	--	irc: connecting to server irc.freenode.net"/6667...
+2014-10-24 17:50:36	=!=	irc: address "irc.freenode.net"" not found
+2014-10-24 17:50:36	=!=	irc: error: Name or service not known
+2014-10-24 17:50:36	--	irc: switching address to "/6667
+2014-10-24 17:50:36	--	irc: connecting to server "/6667...
+2014-10-24 17:50:36	=!=	irc: address """ not found
+2014-10-24 17:50:36	=!=	irc: error: Name or service not known
+2014-10-24 17:50:36	--	irc: switching address to irc.freenode.net"/6667
+2014-10-24 17:50:36	--	irc: reconnecting to server in 40 seconds
+2014-10-24 17:51:01	--	irc: disconnected from server

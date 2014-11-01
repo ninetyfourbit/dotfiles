@@ -1,0 +1,124 @@
+sw_volume: 100
+audio_device_state:1:My ALSA Device
+audio_device_state:1:my_fifo
+state: play
+current: 82
+time: 67.925000
+random: 1
+repeat: 1
+single: 0
+consume: 0
+crossfade: 5
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:savant/alchemist/01-savant-mother_earth.mp3
+1:savant/alchemist/02-savant-sky_is_the_limit_(feat_donny_goines).mp3
+2:savant/alchemist/03-savant-sledgehammer.mp3
+3:savant/alchemist/04-savant-alchemist_(feat_gino_sydal).mp3
+4:savant/alchemist/05-savant-dancer_in_the_dark.mp3
+5:savant/alchemist/06-savant-hungry_eyes_(feat_qwentalis).mp3
+6:savant/alchemist/07-savant-sustainer.mp3
+7:savant/alchemist/08-savant-witchcraft.mp3
+8:savant/alchemist/09-savant-redemption.mp3
+9:savant/alchemist/10-savant-konami_kode_(feat_donny_goines).mp3
+10:savant/alchemist/11-savant-melody_circus.mp3
+11:savant/alchemist/12-savant-fat_cat_shuffle.mp3
+12:savant/alchemist/13-savant-bananonymous.mp3
+13:savant/alchemist/14-savant-the_horror.mp3
+14:savant/alchemist/15-savant-manslaughter_(feat_svanur_papparazzi).mp3
+15:savant/alchemist/16-savant-paradisco.mp3
+16:savant/alchemist/17-savant-black_magic.mp3
+17:savant/alchemist/18-savant-face_off.mp3
+18:savant/alchemist/19-savant-pirate_bay_(feat_twistex).mp3
+19:savant/alchemist/20-savant-no_time_for_pussy.mp3
+20:savant/alchemist/21-savant-the_beginning_is_near.mp3
+21:savant/alchemist/22-savant-sayonara.mp3
+22:savant/cult/01. Robin Hood (Original Mix).mp3
+23:savant/cult/02. Nightowl (Original Mix).mp3
+24:savant/cult/03. Kali 47 (Original Mix).mp3
+25:savant/cult/04. Savant, Kaster - Forbidden (Original Mix).mp3
+26:savant/cult/05. Patriots (Original Mix).mp3
+27:savant/cult/06. West Coast (Original Mix).mp3
+28:savant/cult/07. Can't Touch This (Original Mix).mp3
+29:savant/cult/08. Virgin (Original Mix).mp3
+30:savant/cult/09. Savant, Gino Sydal - Chop It (Original Mix).mp3
+31:savant/cult/10. Butterfly (Original Mix).mp3
+32:savant/heart/Step_Up_Your_Game_Original_Mix.mp3
+33:savant/heart/Wild_Ganja_Original_Mix.mp3
+34:savant/heart/Heart_Original_Mix.mp3
+35:savant/heart/Siren_feat__Ninur_Original_Mix.mp3
+36:savant/heart/Heartbreakers_Original_Mix.mp3
+37:savant/orakel/01. Orakel (Original Mix).mp3
+38:savant/orakel/02. Spacewolfe (Original Mix).mp3
+39:savant/orakel/03. Origin (Original Mix).mp3
+40:savant/orakel/04. Sawchain (Original Mix).mp3
+41:savant/orakel/05. How I Roll (Original Mix).mp3
+42:savant/orakel/06. Penguins (Original Mix).mp3
+43:savant/orakel/07. Valley of Shadows (Original Mix).mp3
+44:savant/orakel/08. Awakening Wonders (Original Mix).mp3
+45:savant/orakel/09. Prophecy (Original Mix).mp3
+46:savant/orakel/10. Organismical (Original Mix).mp3
+47:savant/orakel/11. Snake Eyes (Original Mix).mp3
+48:savant/orakel/12. Rave Life (Original Mix).mp3
+49:savant/orakel/13. Legacy (Original Mix).mp3
+50:savant/orakel/14. Valkyrie (Original Mix).mp3
+51:savant/orakel/15. Stargate (Original Mix).mp3
+52:savant/orakel/16. Red Claw (Original Mix).mp3
+53:savant/orakel/17. Reggaetron (Original Mix).mp3
+54:savant/orakel/18. Soap (Original Mix).mp3
+55:savant/orakel/19. Survive (Original Mix).mp3
+56:savant/orakel/20. Air Balloon (Original Mix).mp3
+57:savant/orakel/21. Rapture (Original Mix).mp3
+58:savant/overworld/01 - Overworld.mp3
+59:savant/overworld/02 - Bad Baws.mp3
+60:savant/overworld/03 - Megaboy.mp3
+61:savant/overworld/04 - Starscream Forever.mp3
+62:savant/overworld/05 - Quantum Mechanics.mp3
+63:savant/overworld/06 - Arcade Night Cruise.mp3
+64:savant/overworld/07 - Ride Like The Wind.mp3
+65:savant/overworld/08 - Dirty Mary.mp3
+66:savant/overworld/09 - Diamond Blush.mp3
+67:savant/overworld/10 - Flashbach.mp3
+68:savant/overworld/11 - Eggs.mp3
+69:savant/overworld/12 - Destroy The Dragon.mp3
+70:savant/overworld/13 - Vinter O.mp3
+71:savant/overworld/14 - Robot People Monster.mp3
+72:savant/overworld/15 - Firecloud.mp3
+73:savant/overworld/16 - Slaughterface.mp3
+74:savant/overworld/17 - Breakdown.mp3
+75:savant/protos/01. Savant - Man of the Law.mp3
+76:savant/protos/02. Savant - Prototype.mp3
+77:savant/protos/03. Savant - Spaceship.mp3
+78:savant/protos/04. Savant - Rider in Red.mp3
+79:savant/protos/05. Savant - Fakers.mp3
+80:savant/protos/06.Savant - Rise Up.mp3
+81:savant/protos/07. Savant - Nebula.mp3
+82:savant/protos/08. Savant - Spaceheart.mp3
+83:savant/protos/09. Savant - Laser Sharks.mp3
+84:savant/protos/10. Savant - Cry for Love.mp3
+85:savant/protos/11. Savant - Samurai.mp3
+86:savant/protos/12. Savant - Quest.mp3
+87:savant/protos/13. Savant - Venom.mp3
+88:savant/protos/14. Savant - Super Sheriff.mp3
+89:savant/protos/15. Savant - Sword of Destiny.mp3
+90:savant/protos/16. Savant - Hit the Top.mp3
+91:savant/protos/17. Savant - Aquarius.mp3
+92:savant/protos/18. Savant - Beautiful World.mp3
+93:savant/vario/01-savant-splinter_original_mix_[plixid.com].mp3
+94:savant/vario/02-savant-vario_original_mix_[plixid.com].mp3
+95:savant/vario/03-savant-living_ipod_original_mix_[plixid.com].mp3
+96:savant/vario/04-savant-mecha_blecka_original_mix_[plixid.com].mp3
+97:savant/vario/05-savant-shadow_original_mix_[plixid.com].mp3
+98:savant/vario/06-savant-stormtrooper_original_mix_[plixid.com].mp3
+99:savant/vario/07-savant-hero_from_the_past_original_mix_[plixid.com].mp3
+100:savant/vario/08-savant-antipixel_original_mix_[plixid.com].mp3
+101:savant/vario/09-savant-bada_bing_original_mix_[plixid.com].mp3
+102:savant/vario/10-savant-party_machine_original_mix_[plixid.com].mp3
+103:savant/vario/11-savant-champagne_original_mix_[plixid.com].mp3
+104:savant/vario/12-savant-heartshaped_mushroom_cloud_original_mix_[plixid.com].mp3
+105:savant/vario/13-savant-burgertime_savant_theme_original_mix_[plixid.com].mp3
+106:savant/vario/14-savant-trust_issues_original_mix_[plixid.com].mp3
+107:savant/vario/15-savant-savant_fuck_nexus_original_mix_[plixid.com].mp3
+108:savant/vario/16-savant-savant_thunderclout_original_mix_[plixid.com].mp3
+playlist_end

@@ -1,0 +1,3 @@
+#! /bin/bash
+
+panel_bar | bar -f "-*-gohufont-medium-*-*-11-*-*-*-*-*-*-1"  -B\#ff222222 -g 1920x16+0+0
