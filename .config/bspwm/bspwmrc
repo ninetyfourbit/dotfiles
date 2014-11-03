@@ -1,6 +1,6 @@
 #! /bin/sh
 
-bspc config border_width        	2
+bspc config border_width        	1
 bspc config window_gap          	8
 bspc config split_ratio         	0.50
 bspc config borderless_monocle  	false
@@ -14,9 +14,9 @@ bspc config focused_frame_opacity	1.00
 ###############
 
 # z-brah
-bspc config focused_border_color	"#CEE318"
-bspc config normal_border_color		"#4C4C4C"
-bspc config active_border_color		"#CEE318"
+bspc config focused_border_color    "#333333"
+bspc config normal_border_color     "#222222"
+bspc config active_border_color     "#333333"
 bspc config presel_border_color		"#79CDCD"
 bspc config urgent_border_color		"#79CDCD"
 
@@ -70,6 +70,7 @@ bspc monitor -d 1 2 3
 
 bspc rule -a Firefox desktop=^2
 bspc rule -a urxvt window=pseudo_tiled
+bspc rule -a mupdf window=pseudo_tiled
 
 PANEL_HEIGHT=14
 PANEL_FIFO="/tmp/panel-fifo"
