@@ -31,6 +31,7 @@ alias pomf="sh ~/scripts/pomf"
 alias teknik.io="sh ~/scripts/teknik.io"
 alias barcolor="vim ~/scripts/panel_colors-bar"
 alias weather="python2 ~/weather-cli/weathercli.py bicknell,in -u celsius"
+alias v="vim"
 
 #functions
 
@@ -43,7 +44,8 @@ curl -F 'sprunge=<-' http://sprunge.us
 #prompt fade green
 #PROMPT=" % » "
 #PROMPT=" % ─ "
-PROMPT=" % ―――― "
+PROMPT=" % %{$fg_bold[green]%}――― %{$reset_color%}"
+#PROMPT=" % %{$fg[yellow]%}%_ %{$reset_color%}"
 RPROMPT="%{$fg[lightgreen]%}%~ %{$reset_color%}"
 
 # Lines configured by zsh-newuser-install
