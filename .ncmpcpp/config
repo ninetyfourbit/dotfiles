@@ -57,8 +57,9 @@ audio_output {
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
 #
-visualizer_in_stereo = "yes"
+visualizer_in_stereo = "no"
 #
+#visualizer_in_stereo = "yes"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 #
 ##
@@ -89,8 +90,8 @@ visualizer_sync_interval = "30"
 visualizer_type = "spectrum" (spectrum/wave)
 #
 #visualizer_color = "black"
-visualizer_look = "●▉"
-#visualizer_look = "|."
+#visualizer_look = "●▉"
+visualizer_look = "●│"
 #
 ##### system encoding #####
 ##
@@ -480,9 +481,9 @@ main_window_highlight_color = "white"
 #
 progressbar_color = "black"
 #
-statusbar_color = "black"
+statusbar_color = "white"
 #
-alternative_ui_separator_color = "black"
+alternative_ui_separator_color = "white"
 #
 active_column_color = "cyan"
 #
