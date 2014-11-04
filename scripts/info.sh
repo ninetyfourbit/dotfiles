@@ -40,7 +40,7 @@ wmname="bspwm"
 pkgnum=$(pacman -Q|wc -l)
 birthd=$(sed -n '1s/^\[\([0-9-]*\).*$/\1/p' /var/log/pacman.log | tr - .)
 
-gitdir="github.com/nietyfourbit"
+gitdir="github.com/ninetyfourbit"
 myblog="www.ninetyfourbit.com"
 
 cat << EOF
