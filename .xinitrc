@@ -15,4 +15,6 @@ unclutter &
 sxhkd &
 sh ~/scripts/pbar &
 exec bspwm 
+#2bwm
+#exec urxvt
 #exec i3
