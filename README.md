@@ -9,4 +9,4 @@ Required:
 * weathercli
 * rxvt-unicode
 
-![ss.png](https://raw.githubusercontent.com/ninetyfourbit/dotfiles/master/zbro.png)
+![ss.png](http://a.pomf.se/keegvu.png)
