@@ -17,6 +17,7 @@ export WEATHER_UNITS=celcius
 
 #aliases
 
+alias lsa="ls -ah"
 alias showcolors="sh ~/scripts/c1.sh"
 alias bspwmrc="vim ~/.config/bspwm/bspwmrc"
 alias sxhkdrc="vim ~/.config/sxhkd/sxhkdrc"
