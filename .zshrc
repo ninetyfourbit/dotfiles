@@ -39,8 +39,8 @@ curl -F 'sprunge=<-' http://sprunge.us
 
 #prompt fade green
 #PROMPT=" % » "
-PROMPT=" % %{$fg_bold[green]%}――― %{$reset_color%}"
-RPROMPT="%{$fg[lightgreen]%}%~ %{$reset_color%}"
+PROMPT=" % %{$fg_bold[magenta]%}――― %{$reset_color%}"
+RPROMPT="%{$fg_bold[magenta]%}%~ %{$reset_color%}"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
