@@ -1,0 +1,208 @@
+2014-10-31 10:00:35	◥	_glitch (~weechat@unaffiliated/glitch/x-5362854) has joined #weechat
+2014-10-31 10:00:35	ℹ 	Topic for #weechat is "http://weechat.org/ | Latest stable version: 1.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2014-10-31 10:00:35	ℹ 	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 28 Sep 2014 03:29:04
+2014-10-31 10:00:35	ℹ 	Channel #weechat: 563 nicks (3 ops, 1 voice, 559 normals)
+2014-10-31 10:00:36	ℹ 	PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: http://weechat.org/doc/
+2014-10-31 10:00:36	ℹ 	URL for #weechat: http://weechat.org/
+2014-10-31 10:00:37	ℹ 	Channel created on Sun, 26 Nov 2006 00:42:51
+2014-10-31 10:01:23	◣	kamora (kamora@unaffiliated/kamora) has left #weechat ("BitchX 1.3.1")
+2014-10-31 10:01:34	◥	mgue (~mgue@p548A62D8.dip0.t-ipconnect.de) has joined #weechat
+2014-10-31 10:02:21	◥	sdfvsfgvsdf (~bauasdgwg@37.254.251.185) has joined #weechat
+2014-10-31 10:03:55	ℹ 	argakiig_absent is now known as argakiig
+2014-10-31 10:09:00	◥	diegovio1 (~diego@unaffiliated/diegoviola) has joined #weechat
+2014-10-31 10:09:24	ℹ 	diegovio1 is now known as dviola
+2014-10-31 10:10:42	◥	chandan__ (~chandan@106.51.242.80) has joined #weechat
+2014-10-31 10:12:02	_glitch	I'm messing with someone else's config to make it my own and th I'm screwing with someone else's configs to make them my own but the 'topics' are all the same color as the bg. I just need to know which
+2014-10-31 10:12:19	_glitch	option is for the topic color
+2014-10-31 10:14:12	◣	frakturfreak (fraktur@unaffiliated/frakturfreak) has quit (Disconnected by services)
+2014-10-31 10:14:15	◥	mimo_m (~mimo_m@41.44.106.139) has joined #weechat
+2014-10-31 10:14:32	◥	frakturfreak1 (fraktur@unaffiliated/frakturfreak) has joined #weechat
+2014-10-31 10:16:05	Yaniel	use iset and search
+2014-10-31 10:17:13	sakkemo	/iset title => the one with color_fg
+2014-10-31 10:17:36	sakkemo	=> weechat.bar.title.color_fg
+2014-10-31 10:17:37	◥	ayrie (~pi@unaffiliated/alisonc) has joined #weechat
+2014-10-31 10:17:41	ayrie	Hmm
+2014-10-31 10:17:44	ayrie	10:15:16 -- JessicaTeeples: No suck nick
+2014-10-31 10:18:01	ayrie	'No suck nick' <-- seems like a typo in weechat
+2014-10-31 10:18:05	Yaniel	remmeber you need the iset.pl script for that command
+2014-10-31 10:18:50	ℹ 	frakturfreak1 is now known as frakturfreak
+2014-10-31 10:18:52	Nicd-	ayrie: I think that comes from the network
+2014-10-31 10:19:03	ayrie	Nicd-: I'll try it on a different network
+2014-10-31 10:19:06	Nicd-	I'm getting "no such server" on freenode
+2014-10-31 10:19:23	Nicd-	and " 16:18:55 	***	[teoajktoaejtoj] Nick does not exist" on bitlbee
+2014-10-31 10:19:29	◥	Nnel (~Nnel@host86-189-1-123.range86-189.btcentralplus.com) has joined #weechat
+2014-10-31 10:19:35	ayrie	(That trying to query someone who isn't on the network)
+2014-10-31 10:19:38	ayrie	                                            
+2014-10-31 10:19:40	ayrie	10:19:24 -- bhugherdhabhuun: No such nick/channel
+2014-10-31 10:19:43	ayrie	That is what I get on Freenode
+2014-10-31 10:19:53	ayrie	I did not know this was come from the network.
+2014-10-31 10:21:47	Nicd-	ayrie:  16:21:36 	Freenode -->	:sendak.freenode.net 401 Nicd- okaetroketoaektoaetak :No such nick/channel
+2014-10-31 10:21:57	Nicd-	that's the raw message returned from the network
+2014-10-31 10:22:03	ayrie	Aha
+2014-10-31 10:22:27	ayrie	ta for the explaination :)
+2014-10-31 10:22:45	◣	Ravana (~Ravana@unaffiliated/ravana) has quit (Quit: WeeChat 1.0.1)
+2014-10-31 10:23:17	Nicd-	ayrie: can check what you get from the network with /server raw
+2014-10-31 10:23:50	◣	Nnel (~Nnel@host86-189-1-123.range86-189.btcentralplus.com) has quit (Ping timeout: 245 seconds)
+2014-10-31 10:23:59	◥	Ravana (~Ravana@unaffiliated/ravana) has joined #weechat
+2014-10-31 10:24:05	◣	Ravana (~Ravana@unaffiliated/ravana) has quit (Client Quit)
+2014-10-31 10:24:32	◥	Ravana (~Ravana@unaffiliated/ravana) has joined #weechat
+2014-10-31 10:29:27	ℹ 	Keridos_off is now known as Keridos
+2014-10-31 10:34:01	ayrie	ah
+2014-10-31 10:34:27	◥	mineral (~Aidan@unaffiliated/mineral) has joined #weechat
+2014-10-31 10:34:29	ayrie	also, how can I get rid of modelines in the status bar? i don't need them because i am not op an any channels but they take o=up lots of space for some of the channels
+2014-10-31 10:34:55	ayrie	14:#xkcd-compsci(+ntrSCTf [5j#R15,10m#M15,5t]:3){76}*
+2014-10-31 10:35:17	ayrie	I don't need that +ntrSCTf agfiuguseirgeuigreh crap, i don't understand what it means anyway.
+2014-10-31 10:36:40	◣	read (~Aidan@unaffiliated/mineral) has quit (Ping timeout: 240 seconds)
+2014-10-31 10:37:28	ayrie	I don't see anything corresponding to the mode line on weechat.bar.status.items.
+2014-10-31 10:44:37	◥	semeion (~semeion@unaffiliated/semeion) has joined #weechat
+2014-10-31 10:45:32	_glitch	sakkemo: /iset weechat
+2014-10-31 10:45:34	_glitch	?
+2014-10-31 10:45:59	_glitch	sakkemo: I see now. Sorry. Thanks
+2014-10-31 10:46:19	sakkemo	right, good :)
+2014-10-31 10:46:46	Naama	Okay so. Are there any known issues with Weechat and large channels?
+2014-10-31 10:47:14	_glitch	sakkemo: Getting unknown command /iset
+2014-10-31 10:47:27	Naama	I'm on one large channel and it acts weird. For some reason the backlog clears whenever it feels like it.
+2014-10-31 10:47:56	MrElendig	_glitch: /script install iset.py
+2014-10-31 10:48:10	sakkemo	_glitch: it's a script for recent enough weechats, see above ^
+2014-10-31 10:48:28	◥	dkoby (~dmitry@37.21.175.63) has joined #weechat
+2014-10-31 10:48:30	_glitch	script: iset.py not found
+2014-10-31 10:48:49	_glitch	iset.pl maybe?
+2014-10-31 10:48:56	MrElendig	yes
+2014-10-31 10:49:07	_glitch	Ah. There it is.
+2014-10-31 10:50:12	_glitch	Er.. I don't think that's the right option, sakkemo.
+2014-10-31 10:50:53	_glitch	What I meant by the topic is that 'Topic for #weechat', #weechat is same color as the background. 
+2014-10-31 10:50:58	sakkemo	_glitch: do you mean topic when you do /topic and not one that's shown in a title bar (at least in somewhat default configs)?
+2014-10-31 10:51:21	ℹ 	Topic for #weechat is "http://weechat.org/ | Latest stable version: 1.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2014-10-31 10:51:21	ℹ 	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 28 Sep 2014 03:29:04
+2014-10-31 10:51:34	_glitch	Yes.
+2014-10-31 10:51:45	sakkemo	try this one: weechat.color.chat_channel
+2014-10-31 10:51:46	_glitch	For some reason, all instances beginning with the '#' are black
+2014-10-31 10:53:26	_glitch	sakkemo: That's it there. But for some reason it gives me 'Error, failed to set option'
+2014-10-31 10:53:39	◥	owluntu (~owlsoap@c-5eeaaa0d-74736162.cust.telenor.se) has joined #weechat
+2014-10-31 10:54:35	sakkemo	/set weechat.color.chat_channel 220     is the exact command, no = or anything if that's the reason
+2014-10-31 10:55:01	_glitch	I used /set weechat.color.chat_channel grey
+2014-10-31 10:55:34	sakkemo	try gray :P
+2014-10-31 10:55:46	_glitch	... derp
+2014-10-31 10:55:49	_glitch	Lol. Thanks.
+2014-10-31 10:55:59	sakkemo	I tend to use the numbers though
+2014-10-31 10:57:02	◣	ogny (~orkun@unaffiliated/ogny) has quit (Quit: WeeChat 0.4.2)
+2014-10-31 10:57:48	_glitch	Alright, one more? The color of the channel in the bar turns darkgray when there's activity. I want to change it to cyan. Which option is this?
+2014-10-31 11:00:27	sakkemo	buffers.pl bar or the default hotlist (with the numbers)?
+2014-10-31 11:00:30	ℹ 	owluntu is now known as owlsauce
+2014-10-31 11:00:38	_glitch	I'm using buffers.pl
+2014-10-31 11:01:36	Naama	http://is.gd/5WESlZ
+2014-10-31 11:01:56	sakkemo	_glitch: try searching with /iset buffers (probably buffers.color.hotlist_message_fg)
+2014-10-31 11:02:44	_glitch	sakkemo: That did it. Thanks again!
+2014-10-31 11:04:55	◥	ogny (~orkun@unaffiliated/ogny) has joined #weechat
+2014-10-31 11:07:56	◥	singalaut (~mami@unaffiliated/tomoe-mami/x-1769741) has joined #weechat
+2014-10-31 11:09:05	◣	KillYourTV (~kytv@gateway/tor-sasl/killyourtv) has quit (Remote host closed the connection)
+2014-10-31 11:09:54	◥	KillYourTV (~kytv@gateway/tor-sasl/killyourtv) has joined #weechat
+2014-10-31 11:13:22	◣	aswen (~aswen@smtp3.nedap.com) has quit (Quit: WeeChat 1.0.1)
+2014-10-31 11:13:38	◥	Nnel (~Nnel@host86-189-1-123.range86-189.btcentralplus.com) has joined #weechat
+2014-10-31 11:16:47	◣	sirderpalot (~pzzt@unaffiliated/sirderpalot) has quit (Ping timeout: 250 seconds)
+2014-10-31 11:18:17	◣	Nnel (~Nnel@host86-189-1-123.range86-189.btcentralplus.com) has quit (Ping timeout: 264 seconds)
+2014-10-31 11:28:52	◣	dorftrottel (~horst@gateway/tor-sasl/dorftrottel) has quit (Remote host closed the connection)
+2014-10-31 11:29:50	◥	dorftrottel (~horst@gateway/tor-sasl/dorftrottel) has joined #weechat
+2014-10-31 11:32:47	◥	camel_case_t (~Google_Lo@75-25-141-102.lightspeed.okldca.sbcglobal.net) has joined #weechat
+2014-10-31 11:33:05	◣	mimo_m (~mimo_m@41.44.106.139) has left #weechat
+2014-10-31 11:37:26	◥	kelnoky (~shao@95.91.227.105) has joined #weechat
+2014-10-31 11:46:51	◣	_glitch (~weechat@unaffiliated/glitch/x-5362854) has left #weechat ("WeeChat 1.0.1")
+2014-10-31 11:46:53	ℹ 	irc: disconnected from server
+2014-11-06 17:50:03	◥	dtch (~weechat@unaffiliated/glitch/x-5362854) has joined #weechat
+2014-11-06 17:50:03	ℹ 	Topic for #weechat is "http://weechat.org/ | Latest stable version: 1.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2014-11-06 17:50:03	ℹ 	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 28 Sep 2014 03:29:04
+2014-11-06 17:50:03	ℹ 	Channel #weechat: 580 nicks (3 ops, 1 voice, 576 normals)
+2014-11-06 17:50:03	ℹ 	PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: http://weechat.org/doc/
+2014-11-06 17:50:03	ℹ 	URL for #weechat: http://weechat.org/
+2014-11-06 17:50:05	ℹ 	Channel created on Sun, 26 Nov 2006 00:42:51
+2014-11-06 17:50:46	◥	toogy (~toogy@2001:41d0:8:796e::1) has joined #weechat
+2014-11-06 17:50:54	dtch	for irc.color.nick_prefixes, what do the letters mean? "q:lightred;a:lightcyan;o:lightgreen;h:lightmagenta;v:yellow;*:lightblue"
+2014-11-06 17:52:02	toogy	i'm using /sort_buffers to sort the buffers on a per server basis, it works only when I do /sort_buffers reverse but queries are *before* buf in the generated order. How can I sort my buffers automatically, per server with buf
+2014-11-06 17:52:07	toogy	oops
+2014-11-06 17:52:23	toogy	queries are *before* channels in the generated order*
+2014-11-06 17:52:38	toogy	sort them automatically, per server, channels first then queries
+2014-11-06 17:52:43	◣	kirin` (telex@gateway/shell/anapnea.net/x-azlynengsddncdku) has quit (Remote host closed the connection)
+2014-11-06 17:53:50	◣	ruukasu (~ruukasu@unaffiliated/ruukasu) has quit (Quit: WeeChat 1.0.1)
+2014-11-06 17:54:13	◥	ruukasu (~ruukasu@unaffiliated/ruukasu) has joined #weechat
+2014-11-06 17:56:02	◥	Vile` (Vile@unaffiliated/vile/x-1886500) has joined #weechat
+2014-11-06 17:59:05	◣	jcvfen (~jcvfen@136.130.16.62.customer.cdi.no) has quit (Ping timeout: 255 seconds)
+2014-11-06 18:01:54	JosephFerano	I'm a little confused as to how to install a plugin
+2014-11-06 18:01:59	JosephFerano	I found buffers.pl
+2014-11-06 18:02:26	◣	ElanMorin (~Tedronai@pD4B9DE76.dip0.t-ipconnect.de) has quit (Quit: WeeChat 1.0.1)
+2014-11-06 18:02:26	JosephFerano	Do you do script install?
+2014-11-06 18:02:26	dtch	JosephFerano: /script install
+2014-11-06 18:02:30	JosephFerano	oh  ok, that one
+2014-11-06 18:02:37	JosephFerano	do I speciy an absolute path?
+2014-11-06 18:03:36	◣	jontmorehouse (~jonmoreho@cpe-142-129-114-148.socal.res.rr.com) has quit (Ping timeout: 244 seconds)
+2014-11-06 18:03:47	JosephFerano	or should I put the pl file into the script/ folder in ~/.weechat/ ?
+2014-11-06 18:04:20	◣	owlsoap (~owlsoap@c-5eeaaab1-74736162.cust.telenor.se) has quit (Quit: WeeChat 0.4.2)
+2014-11-06 18:05:50	dtch	JosephFerano: No, just /script install buffers.pl -- it should pull it automatically from the site.
+2014-11-06 18:06:18	JosephFerano	oh...
+2014-11-06 18:06:29	JosephFerano	neat
+2014-11-06 18:07:22	◥	kirin` (telex@gateway/shell/anapnea.net/x-vglfkbwjnvpuzdom) has joined #weechat
+2014-11-06 18:07:27	JosephFerano	says I need to load perl...
+2014-11-06 18:07:42	ℹ 	Benguin is now known as Benguin[ZzZ]
+2014-11-06 18:08:16	dtch	try /script update
+2014-11-06 18:09:04	JosephFerano	script: script "buffers.pl" can not be installed because plugin "perl" is not loaded
+2014-11-06 18:09:07	JosephFerano	I'm getting that
+2014-11-06 18:09:14	JosephFerano	I'm trying to do /script load perl
+2014-11-06 18:09:18	JosephFerano	and /plugin load perl
+2014-11-06 18:09:20	JosephFerano	none work
+2014-11-06 18:09:58	JosephFerano	do I need to redownload weechat with the flag --with-perl?
+2014-11-06 18:10:30	dtch	You're on Arch?
+2014-11-06 18:10:33	JosephFerano	mac
+2014-11-06 18:10:46	JosephFerano	I got it through homebrew
+2014-11-06 18:10:46	dtch	You should try to re-download
+2014-11-06 18:11:13	JosephFerano	is there a "version" command like in vim where it shows all of the installed options like +perl and +python
+2014-11-06 18:11:25	FiXato	brew info weechat
+2014-11-06 18:11:40	JosephFerano	right, I can do it through brew
+2014-11-06 18:12:07	FiXato	brew reinstall weechat --with-perl --with-ruby etc
+2014-11-06 18:12:09	◣	kirin` (telex@gateway/shell/anapnea.net/x-vglfkbwjnvpuzdom) has quit (Remote host closed the connection)
+2014-11-06 18:12:11	JosephFerano	but that gives the options I can install, not what it currently has no?
+2014-11-06 18:13:15	JosephFerano	should I install with aspell?
+2014-11-06 18:13:39	FiXato	if you want to use spell correction
+2014-11-06 18:13:42	JosephFerano	meh
+2014-11-06 18:13:43	◥	jontmorehouse (~jonmoreho@cpe-142-129-114-148.socal.res.rr.com) has joined #weechat
+2014-11-06 18:13:55	JosephFerano	my speling is impecabel
+2014-11-06 18:14:15	JosephFerano	alright, I'll be back
+2014-11-06 18:14:20	JosephFerano	thanks for the help
+2014-11-06 18:14:24	◣	JosephFerano (~josephfer@70.45.254.222) has quit (Quit: WeeChat 1.0.1)
+2014-11-06 18:14:37	azizLIGHT	is trigger a script, plugin, or built in command?
+2014-11-06 18:14:44	azizLIGHT	i cant find it in /script
+2014-11-06 18:14:46	FiXato	learn2/upgrade
+2014-11-06 18:14:58	azizLIGHT	and i get unknown command when i do /trigger
+2014-11-06 18:15:09	FiXato	azizLIGHT, plugin afaik
+2014-11-06 18:15:23	FiXato	what version are you on?
+2014-11-06 18:15:41	dtch	for irc.color.nick_prefixes, what do the letters mean? "q:lightred;a:lightcyan;o:lightgreen;h:lightmagenta;v:yellow;*:lightblue"
+2014-11-06 18:15:41	azizLIGHT	how do i echo it
+2014-11-06 18:15:55	◣	hx0x (~hx0x@p4FE76CA4.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2014-11-06 18:16:00	◣	seschwar (~seschwar@unaffiliated/seschwar) has quit (Quit: :qa)
+2014-11-06 18:16:01	FiXato	channeo-usermodes
+2014-11-06 18:16:14	azizLIGHT	whats the command to echo the version to channel
+2014-11-06 18:16:24	FiXato	q=founder/owner, a=admin/sop, h=halfop, o=op
+2014-11-06 18:16:33	FiXato	v=voice
+2014-11-06 18:16:47	singalaut	WeeChat 1.1-dev [compiled on Oct 26 2014 05:08:37]
+2014-11-06 18:16:53	singalaut	azizLIGHT: /v -o
+2014-11-06 18:16:58	azizLIGHT	WeeChat 1.1-dev (git: v1.0-141-g9d849db) [compiled on Oct 13 2014 05:10:41]
+2014-11-06 18:17:45	FiXato	yeah, that should have trigger. Do you only autoload a limited amount of plugins?
+2014-11-06 18:18:03	◥	danemacmillan (~danemacmi@unaffiliated/danemacmillan) has joined #weechat
+2014-11-06 18:18:04	azizLIGHT	yes
+2014-11-06 18:18:18	azizLIGHT	so i disabled it i guess
+2014-11-06 18:18:47	FiXato	then you'll probably have to add trigger to the autoload list if you want to use it ;)
+2014-11-06 18:20:41	azizLIGHT	where are the plugins stored
+2014-11-06 18:21:30	azizLIGHT	i dont see them in the language dirs
+2014-11-06 18:21:44	azizLIGHT	dirs like perl or python in ~/.weechat
+2014-11-06 18:21:57	◣	frakturfreak (fraktur@unaffiliated/frakturfreak) has quit (Remote host closed the connection)
+2014-11-06 18:22:13	◥	frakturfreak (fraktur@unaffiliated/frakturfreak) has joined #weechat
+2014-11-06 18:23:03	azizLIGHT	nvm i just set weechat.plugins.autolaod
+2014-11-06 18:23:15	azizLIGHT	weechat.plugin.autoload
+2014-11-06 18:25:29	FiXato	/plugin load trigger
+2014-11-06 18:26:27	FiXato	the 'language' dirs only contain scripts, not plugins
+2014-11-06 18:32:31	dtch	FiXato: Thank you. How do you clear the chat window?
+2014-11-06 18:33:07	FiXato	you don't. you clear the buffer instead
+2014-11-06 18:33:14	FiXato	/help buffer
+2014-11-06 18:33:48	xt	you can also type
+2014-11-06 18:33:54	xt	/quit
+2014-11-06 18:34:41	xt	look how nice, the weechat quit prevention stopped me from quitting. you can type /quit without actually quitting!
+2014-11-06 18:40:55	FiXato	dtch: did you find /buffer clear yet?
+2014-11-06 18:41:17	FiXato	or the default alias /c

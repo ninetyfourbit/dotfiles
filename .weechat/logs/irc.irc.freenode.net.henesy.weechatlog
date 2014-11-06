@@ -1,0 +1,394 @@
+2014-10-27 20:22:31	henesy	you need help with linux on a macbook?
+2014-10-27 20:23:16	henesy	and to answer your question, yes, bootloader on arch 
+2014-10-27 20:23:19	henesy	get refind installed
+2014-10-27 20:23:29	_glitch	Alright. Thanks. I've been trying to get it working all day
+2014-10-27 20:23:29	henesy	then check your /efi directory for a tools folder
+2014-10-27 20:23:40	henesy	make sure in the tools folder there is something for gptsync
+2014-10-27 20:23:41	_glitch	refind on Arch or OSX?
+2014-10-27 20:23:42	henesy	if there IS
+2014-10-27 20:23:44	henesy	ARch
+2014-10-27 20:23:47	henesy	er
+2014-10-27 20:23:52	henesy	bootloader on arch
+2014-10-27 20:23:57	henesy	 /efi on osx
+2014-10-27 20:24:14	henesy	It's been awhile since I went through the whole process
+2014-10-27 20:24:21	henesy	it was easier with Refit back in the day imho
+2014-10-27 20:24:43	henesy	check the refind config file for a showtools entry of sorts, enable it, then put in the name of the gptsync in tools
+2014-10-27 20:24:54	henesy	if you don't have gptsync I can throw a efi tool zip your way
+2014-10-27 20:25:31	henesy	if the gptsync in /efi/tools or whatever is called gptsync_x86_64.efi the entry in the config for showtools or whatever would be gptsync_x86_64
+2014-10-27 20:25:38	henesy	then you'd re-run the install.sh and all that
+2014-10-27 20:25:42	henesy	once the config is updated
+2014-10-27 20:25:42	henesy	reboot
+2014-10-27 20:25:49	henesy	make sure it's there, it'll be an icon next to reboot and all of that
+2014-10-27 20:25:53	henesy	if you're lucky it's there by default
+2014-10-27 20:26:02	henesy	it'll be a little circle-arrow icon
+2014-10-27 20:26:04	henesy	like a sync icon
+2014-10-27 20:26:28	henesy	it drops to an efi shell, which then just running gptsync and letting it run it'll ask if you want to make a hybrid MBR/GPT you say yes
+2014-10-27 20:26:35	henesy	and it'll align everything (hopefully for the better)
+2014-10-27 20:28:18	henesy	you get all of that for OS X done, then just make a partition in disk utility, make it the size you want
+2014-10-27 20:28:25	henesy	then reboot, gptsync the disk
+2014-10-27 20:28:48	henesy	install arch or whatever to the said partition (you might need a second small partition for "reserved for bios" boot depending on how you do things)
+2014-10-27 20:28:58	henesy	make sure to install a bootloader for arch
+2014-10-27 20:29:05	henesy	reboot
+2014-10-27 20:29:09	henesy	gptsync AGAIN (this one is especially important)
+2014-10-27 20:29:11	henesy	then reboot again
+2014-10-27 20:29:15	henesy	and it should show up in the menu
+2014-10-27 20:29:19	henesy	it /might/ not boot the first time
+2014-10-27 20:29:21	henesy	just let it sit for a bit
+2014-10-27 20:29:24	henesy	force reboot and try again
+2014-10-27 20:29:26	henesy	and it should work
+2014-10-27 20:35:39	_glitch	I screencapped this. I can't try again tonight, too frustrated.
+2014-10-27 20:35:59	henesy	I completely understand, it took many nights of frustration to learn the exact method
+2014-10-27 20:36:06	henesy	It's an obnoxiously obtuse method
+2014-10-27 20:36:48	henesy	I've been running *nix on my mac's since the first week I got them, so I can confirm that it can be done
+2014-10-27 20:37:09	henesy	Primarily I ended up using Ubuntu (ew), mostly due to time restraints and I was used to debian and ubuntu worked out of the box with brightness etc
+2014-10-27 20:37:31	henesy	Macbooks seem to have a habit of hating anything but hand-configuring brightness, backlights, sound, wireless, and lid suspend
+2014-10-27 20:37:42	henesy	I had slackware running on here, so it can definitely be done with arch
+2014-10-27 20:37:48	henesy	but it might require some hand-tweaking
+2014-10-27 20:38:49	_glitch	I've had it working with Arch before, but I had to reinstall due to a hard drive crash. Now I can't get the damn thing to work for fuck all.
+2014-10-27 20:40:05	_glitch	Earlier today it was because refind doesn't work with OS X 10.10 so I had to downgrade back to Mavericks, then refind wouldn't find my Arch install. I'm just gonna start fresh in the morning and hope I can get it working.
+2014-10-27 20:40:42	henesy	gptsync
+2014-10-27 20:40:45	henesy	that is most likely your answer
+2014-10-27 20:40:57	henesy	if the partition map changes you can lose things like linux partitions from visibility
+2014-10-27 20:41:06	henesy	alternatively, I had mavericks kill my partition once
+2014-10-27 20:41:12	henesy	and I had to take some really out of the way path to fix it
+2014-10-27 20:41:23	henesy	http://ubuntuforums.org/showthread.php?t=1908210
+2014-10-27 20:41:29	henesy	kind of an answer to the whole EFI thing
+2014-10-27 20:41:41	henesy	I used that /once/ to fix stuff
+2014-10-27 20:41:50	henesy	OS X 10.9+ is kinda sketchy
+2014-10-27 20:41:58	henesy	and OS X upgrades like to kill refind
+2014-10-27 20:42:20	_glitch	I keep everything backed up on a separate hard disk and online so reinstalling OSX or Linux isn't too bad, just a fucking hassle.
+2014-10-27 20:43:06	_glitch	I'm actually sitting at 10.8 right now after the reinstall. Gonna get Arch running and then sit on OS X.
+2014-10-27 20:46:05	_glitch	Fuck it. I'm doing it tonight.
+2014-10-27 20:47:19	henesy	lol
+2014-10-27 20:47:24	henesy	go for it man
+2014-10-27 20:47:52	henesy	just gotta get refind working right
+2014-10-27 20:47:56	henesy	then it's a cakewalk from there
+2014-10-27 20:48:00	henesy	also never partition with disk utility
+2014-10-27 20:48:02	henesy	after the initial blank one
+2014-10-27 20:48:16	henesy	like holy shit disk utility sometimes becomes possessed and nukes partitions it doesn't know
+2014-10-27 20:54:03	_glitch	I know. I just clear up space with it then use cgdisk for the rest
+2014-10-27 20:55:57	henesy	Yeah, pretty much that
+2014-10-27 20:57:42	_glitch	Oh. I do have a weird question
+2014-10-27 20:58:10	henesy	sure?
+2014-10-27 20:58:15	_glitch	The ESP -- should it be mounted at /boot? and if so, what fs-type?
+2014-10-27 20:58:27	henesy	like
+2014-10-27 20:58:29	henesy	the efi partition?
+2014-10-27 20:58:42	_glitch	Yah. EFI Sytem Partition
+2014-10-27 20:58:53	henesy	arch shouldn't touch the /dev/sda1 (first) partition that OS X uses
+2014-10-27 20:58:56	henesy	never ever
+2014-10-27 20:58:57	henesy	never never
+2014-10-27 20:58:58	henesy	make your own
+2014-10-27 20:59:02	henesy	like
+2014-10-27 20:59:04	_glitch	That's what I'm asking about
+2014-10-27 20:59:07	henesy	i've never made a efi partition
+2014-10-27 20:59:09	henesy	yeah
+2014-10-27 20:59:16	_glitch	Wait
+2014-10-27 20:59:18	_glitch	Hold on
+2014-10-27 20:59:20	henesy	you can just get a /boot partition or make a bios reserved partition
+2014-10-27 20:59:40	_glitch	I know to make an EFI Partition. Should it be mounted to /boot?
+2014-10-27 21:00:11	henesy	no
+2014-10-27 21:00:15	henesy	not as far as i know
+2014-10-27 21:00:20	henesy	i've never made an efi partition for mine
+2014-10-27 21:00:41	_glitch	So just a root and home partition?
+2014-10-27 21:00:50	henesy	root, home, yeah
+2014-10-27 21:00:53	henesy	i get away with that usually
+2014-10-27 21:01:00	henesy	i've had fedora and ubuntu complain about not making a BIOS partition
+2014-10-27 21:01:02	henesy	which i did a few times
+2014-10-27 21:01:06	henesy	but hell if i know what that is
+2014-10-27 21:01:13	henesy	i don't think i technically need it
+2014-10-27 21:02:38	_glitch	Alright. Just making sure. So which bootloader do you use on arch? GRUB?
+2014-10-27 21:04:23	henesy	GRUB, yeah
+2014-10-27 21:04:26	henesy	i prefer lilo usually
+2014-10-27 21:04:32	henesy	but if there's any automation at all i'll do grub
+2014-10-27 21:05:15	_glitch	I'll be back in a bit. I gotta lay my kid down
+2014-10-27 21:06:26	henesy	Sure thing man
+2014-10-27 21:13:37	_glitch	Alright. So, I still had Arch installed. I'll remove the boot partition and install GRUB
+2014-10-27 21:15:36	henesy	(nod)
+2014-10-27 21:15:38	henesy	sounds good
+2014-10-27 21:18:15	_glitch	Wait. Do I need just grub or grub-efi-x86_64 ?
+2014-10-27 21:18:37	henesy	I've always just used grub...but it might be symlinked by the distro of the moment, but I believe just GRUB
+2014-10-27 21:23:26	_glitch	So for installation, what should the target be? I blieve i386 is for bios, right?
+2014-10-27 21:24:52	henesy	I suppose
+2014-10-27 21:24:54	henesy	ike
+2014-10-27 21:24:59	henesy	if EFI for mac is /dev/sda1
+2014-10-27 21:25:03	henesy	and mac is /dev/sda2
+2014-10-27 21:25:10	henesy	then the mac backup is /dev/sda3
+2014-10-27 21:25:14	henesy	linux should be like
+2014-10-27 21:25:16	henesy	/dev/sda4
+2014-10-27 21:25:17	henesy	linux root
+2014-10-27 21:25:22	henesy	unless you want a boot partition
+2014-10-27 21:25:29	henesy	but the boot partition must have boot flag on
+2014-10-27 21:25:37	_glitch	No, I mean should the target be i386 or x86_64?
+2014-10-27 21:25:46	henesy	64 for sure
+2014-10-27 21:25:53	henesy	macs are x86_64
+2014-10-27 21:27:53	_glitch	From the wiki: --target=i386-pc instructs grub-install to install for BIOS systems only. It is recommended to always use this option to remove ambiguity in grub-install.
+2014-10-27 21:28:42	_glitch	The options are i386-efi, i386-pc, x86_64-efi. Probably the last one>?
+2014-10-27 21:29:12	_glitch	And it compains about a lack of EFI directory
+2014-10-27 21:29:43	henesy	oh okay
+2014-10-27 21:29:46	henesy	yeah the last one
+2014-10-27 21:29:49	henesy	lack of EFI...fff
+2014-10-27 21:29:55	henesy	that might be the "reserved" partition
+2014-10-27 21:30:14	henesy	but yes I would assume the last one
+2014-10-27 21:30:21	_glitch	so --efi-directory should be /dev/sda1?
+2014-10-27 21:30:34	henesy	Erm
+2014-10-27 21:30:36	henesy	I suppose
+2014-10-27 21:30:40	henesy	well
+2014-10-27 21:30:41	henesy	i mean
+2014-10-27 21:30:43	henesy	i've never used
+2014-10-27 21:30:44	_glitch	Hold up
+2014-10-27 21:30:47	henesy	os x's efi
+2014-10-27 21:30:49	henesy	so i'd say no
+2014-10-27 21:31:03	henesy	but I've never messed with an EFI partition at install
+2014-10-27 21:31:20	_glitch	When you installed grub, do you remember what command you used?
+2014-10-27 21:32:17	henesy	grub-install to /dev/sda1 or whatever the grub2 modern equivalent is
+2014-10-27 21:32:33	henesy	i have to pop open the grub2 man page every time I use it becuase it's not gold grub
+2014-10-27 21:32:35	henesy	*old
+2014-10-27 21:32:54	_glitch	I'm still fairly new to linux so GRUB2 is my old grub
+2014-10-27 21:33:45	_glitch	Ah fuck it. IT's a tomorrow thing. What timezone are you in?
+2014-10-27 21:35:13	henesy	CST
+2014-10-27 21:35:18	henesy	but I have classes most of tomorrow
+2014-10-27 21:35:22	henesy	grub2 is pretty new
+2014-10-27 21:35:29	henesy	you can google "how to install grub2"
+2014-10-27 21:35:41	henesy	 /usually/ returns some kind of useful result
+2014-10-27 21:37:03	_glitch	Alright. I'll give it a go then. So it's 19:37 there then?
+2014-10-27 21:37:19	henesy	20:37
+2014-10-27 21:37:23	henesy	but yeah
+2014-10-27 21:37:37	henesy	i'll be on ~17:00 my time or so
+2014-10-27 21:37:38	_glitch	Oh. Right. I forget to calculate EDT/EST. Fucking dst
+2014-10-27 21:37:42	henesy	lol
+2014-10-27 21:38:00	henesy	Worst case scenario I'm not on until 18:00 CST tomorrow
+2014-10-27 21:38:07	_glitch	It seriously needs to be removed.
+2014-10-27 21:38:11	henesy	Yeah.
+2014-10-27 21:38:13	henesy	DST is bullshit
+2014-10-27 21:38:31	_glitch	I should be on most of tomorrow. Probably around 10:00 CST until 21:00 CST
+2014-10-27 21:38:52	henesy	Cool beans man, I might be spotty on and off
+2014-10-27 21:39:25	henesy	I'll try to lend help when I can, wish ya well
+2014-10-27 21:39:25	_glitch	Alright. Shouldn't be a need unless I want to punch my macbook in it's hard drive.. or.. RAM... or... Whatever the computer equivalent of the nuts is.
+2014-10-27 21:40:19	henesy	cpu = brain, hard drive = brain, ram = shittier brain, graphics card = ???
+2014-10-27 21:40:32	_glitch	eyes?
+2014-10-27 21:41:05	henesy	I suppose, but webcam?
+2014-10-27 21:41:17	_glitch	gpu=retinas?
+2014-10-27 21:41:22	henesy	makes sense
+2014-10-27 21:41:39	_glitch	I suppose the screws holding it together?
+2014-10-27 21:42:10	henesy	that would make sense
+2014-10-27 21:42:26	_glitch	Unless it literally has nuts and bolts.. But not on the MBP..
+2014-10-27 21:45:14	henesy	Heh
+2014-10-27 21:45:20	henesy	my pro has served me well
+2014-10-27 21:45:28	henesy	but linux + pro = bleh
+2014-10-27 21:45:58	_glitch	Wait, MBP or a Desktop Mac Pro?
+2014-10-27 21:57:13	henesy	MBP
+2014-10-27 21:57:29	henesy	I have a MBP ~2011ish and a Macbook Unibody from ~2009
+2014-10-27 21:58:01	_glitch	Macbook Unibody?
+2014-10-27 22:00:16	henesy	White shell, pre-metal
+2014-10-27 22:00:24	henesy	really terrible plastic
+2014-10-27 22:00:30	_glitch	Oh shit. I remember those.
+2014-10-27 22:00:54	_glitch	For the time, they looked good but as soon as they started with the aluminum, fugetaboudit
+2014-10-27 22:00:56	henesy	I accidentally drilled a hole on it by accident with a pen in class one day not paying attention and just fiddling
+2014-10-27 22:01:08	_glitch	Lol.
+2014-10-27 22:01:09	henesy	how do i words
+2014-10-27 22:01:16	henesy	the plastic is insanely soft
+2014-10-27 22:01:21	henesy	and melts really easily
+2014-10-27 22:01:21	_glitch	words? 'fugetaboudit'?
+2014-10-27 22:01:26	henesy	pretty much
+2014-10-27 22:01:40	_glitch	forget-about-it
+2014-10-27 22:01:51	henesy	in the wise style of ruby puts "words #{words['fugetaboudit']}"
+2014-10-27 22:02:05	henesy	and words as in I said accidentally twice
+2014-10-27 22:02:19	_glitch	Oh. Accidentally accident
+2014-10-27 22:02:24	henesy	yeah :P
+2014-10-27 22:04:28	_glitch	So what are you into?
+2014-10-27 22:04:35	_glitch	As in life, I mean.
+2014-10-27 22:04:41	_glitch	Not sex.
+2014-10-27 22:04:45	_glitch	Y'know
+2014-10-27 22:06:30	henesy	Linux stuff, vidya games casually, tabletop games, I enjoy passively fiddling around with "toy"s like kali linux and entered the arch world through blackarch
+2014-10-27 22:06:49	henesy	i program mostly for utility and recreation
+2014-10-27 22:06:55	henesy	making the occasional tool/script for myself
+2014-10-27 22:07:36	_glitch	tabletop like Settler of Catan or like Monopoly?
+2014-10-27 22:07:49	henesy	Settlers and shit
+2014-10-27 22:08:46	_glitch	Nice. I've wanted to get into stuff like Risk and Settler and D&D but I have no friends to play with and my family is all 'fuck your shit, nobody wants to play fantasy'
+2014-10-27 22:08:59	henesy	lol
+2014-10-27 22:09:05	henesy	D&D is good fun, good for recreation
+2014-10-27 22:09:15	henesy	roll20 is a good place to start as is reddit in general if you're looking for an online group
+2014-10-27 22:09:22	henesy	risk is meh, look into Axis and Allies
+2014-10-27 22:09:28	henesy	Settlers is cool, highly recommend
+2014-10-27 22:09:54	_glitch	I've tried roll20 but I couldn't find one that fit my schedule. Also, I reddit every day. Usually in /r/MechanicalKeyboard and /r/TFTS
+2014-10-27 22:10:00	henesy	lol
+2014-10-27 22:10:02	henesy	that'll do it
+2014-10-27 22:10:16	henesy	roll20 can be a bit jank sometimes
+2014-10-27 22:10:32	henesy	there's a looking for group feature on a couple sites, but I don't do online too terribly often
+2014-10-27 22:10:37	henesy	skype + roll20 is a fantastic resource
+2014-10-27 22:10:59	_glitch	I found interesting options just nothing short enough. I only get a few hours and a 6-hour campaign was the shortest I found
+2014-10-27 22:13:22	henesy	Ouch
+2014-10-27 22:13:24	henesy	that's pretty insane
+2014-10-27 22:13:29	henesy	the sessions I run are 2 hours if we're lucky
+2014-10-27 22:13:37	henesy	but those are more or less dead at this point
+2014-10-27 22:14:05	_glitch	Are there tabletop games for two that can be played over IRC?
+2014-10-27 22:15:10	henesy	eehhhhh
+2014-10-27 22:16:35	henesy	not really 
+2014-10-27 22:16:35	henesy	they get absurdly complicated
+2014-10-27 22:16:35	henesy	i've looked into making ssh-friendly buffered games for the cloud
+2014-10-27 22:16:35	henesy	toss something into a VPS and run the "Server" and it works like the old bsd game hunt
+2014-10-27 22:18:01	_glitch	Oh well. I'll just have to find some people and stuff them in my suv and tell them they will be free to go when we finish the campaign
+2014-10-27 22:26:23	henesy	lol
+2014-10-27 22:26:31	henesy	pretty much how we do it
+2014-10-27 22:26:35	henesy	but we do it in pieces now and then
+2014-10-27 22:27:12	_glitch	I just need others who haven't played and will learn.
+2014-10-27 22:28:09	henesy	do you have a local gaming store?
+2014-10-27 22:28:24	_glitch	We have a Gamestop two towns over.
+2014-10-27 22:28:31	henesy	like
+2014-10-27 22:28:35	henesy	tabletop
+2014-10-27 22:28:44	henesy	most medium-sized cities have one
+2014-10-27 22:28:48	henesy	or one pseudo-nearby
+2014-10-27 22:29:33	_glitch	Maybe.. I haven't thought too much about it. I'll have to check into it.
+2014-10-27 22:30:24	henesy	they're not always advertised well
+2014-10-27 22:30:29	henesy	it's easy to have one slip by
+2014-10-27 22:30:31	_glitch	Yeah..
+2014-10-27 22:31:37	henesy	we apparently had two in town around here, but I didn't know about the other one, and there's a third one that popped up awhile back in some back corner with a small circle of friends who founded it
+2014-10-27 22:31:49	henesy	and unless I was in the right loops I would have never known
+2014-10-27 22:32:08	_glitch	Cool. I'll really have to look around
+2014-10-27 22:33:36	_glitch	Hey, mind taking a scrot? 
+2014-10-27 22:34:07	henesy	of?
+2014-10-27 22:34:32	_glitch	Current screen. I love seeing other people's desks
+2014-10-27 22:35:03	henesy	sure...gimme a sec
+2014-10-27 22:35:09	_glitch	Here's mine http://a.pomf.se/kxglbh.png
+2014-10-27 22:41:01	henesy	http://a.pomf.se/rssjir.png
+2014-10-27 22:42:40	henesy	nice desktop you got there
+2014-10-27 22:43:26	_glitch	 Thanks. Yours is very.. red. I think I've seen yours on /r/unixporn
+2014-10-27 22:43:43	henesy	you have not sadly, I go to unixporn to try to better myself
+2014-10-27 22:43:51	henesy	I'm working on tweaking mine up to look nicer
+2014-10-27 22:44:00	henesy	and red is a very accurate term, mostly so it's easy on the eyes in the dark
+2014-10-27 22:44:32	_glitch	I like my orange for night time (#EA7D24)
+2014-10-27 22:45:00	_glitch	http://www.color-hex.com/color/ea7d24 against the light black background (#151515) is nice.
+2014-10-27 22:45:24	henesy	I wholly agree, If I still used dwm that'd be around what I'd use
+2014-10-27 22:45:28	henesy	but probably still a bit more red/green
+2014-10-27 22:45:57	_glitch	Ah. I forgot to show off my colors/info
+2014-10-27 22:46:18	henesy	one of the two
+2014-10-27 22:46:35	henesy	I think I already asked this
+2014-10-27 22:47:04	_glitch	http://a.pomf.se/jzfwco.png -- colors and info. 
+2014-10-27 22:47:11	_glitch	What did you think you might have already asked?
+2014-10-27 22:47:37	henesy	but do you know anything about awesome WM?
+2014-10-27 22:47:44	henesy	mainly how the menu's work
+2014-10-27 22:47:59	_glitch	I used awesome before switching to bspwm. Do you mean the right-click menu?
+2014-10-27 22:48:18	henesy	I have a sub-menu going off of the screen 
+2014-10-27 22:48:18	henesy	yeah
+2014-10-27 22:48:25	_glitch	Scrot?
+2014-10-27 22:48:30	henesy	sec
+2014-10-27 22:53:25	henesy	well scrot -c isn't liking me at all
+2014-10-27 22:53:28	henesy	but
+2014-10-27 22:53:31	henesy	i can confirm
+2014-10-27 22:53:33	_glitch	-c?
+2014-10-27 22:53:33	henesy	the top of the menu
+2014-10-27 22:53:35	henesy	is off the screen
+2014-10-27 22:53:38	henesy	-c = count
+2014-10-27 22:53:39	henesy	i.e delay
+2014-10-27 22:53:44	henesy	the top and bottom go off the screen
+2014-10-27 22:53:47	_glitch	Isn't it -cd ?
+2014-10-27 22:53:51	henesy	is it?
+2014-10-27 22:53:56	_glitch	man scrot
+2014-10-27 22:54:09	_glitch	no.
+2014-10-27 22:54:13	_glitch	-d <sec>
+2014-10-27 22:54:31	_glitch	-c displays the countdown, -d is the actual delay
+2014-10-27 22:56:06	henesy	http://i.imgur.com/f9mD6Nj.png?1
+2014-10-27 22:56:08	henesy	boom
+2014-10-27 22:56:22	henesy	not using pomf.se because it makes me irrationally nervous
+2014-10-27 22:57:10	_glitch	Why's 'at? 
+2014-10-27 22:57:21	henesy	it's a domain...named pomf...in sweden
+2014-10-27 22:57:31	henesy	kinda sketchy
+2014-10-27 22:57:31	_glitch	?
+2014-10-27 22:57:33	_glitch	Lol.
+2014-10-27 22:57:57	_glitch	I use it because it's easy and reliable. Not to mention the script is so easy 'pomf ~/image.png' and you're done.
+2014-10-27 22:58:27	_glitch	Anyway, you just need to add another submenu or getter a higher res screen. The menu is too big so it goes off-screen.
+2014-10-27 22:58:47	henesy	Alright, I figured as much
+2014-10-27 22:58:50	_glitch	Judging by the scrot, probably an 'rfidiot' submenu
+2014-10-27 22:59:02	henesy	lol, yeah
+2014-10-27 22:59:16	henesy	I can compress them down a bit, the menu was generated, hence the clutter
+2014-10-27 22:59:48	_glitch	Ah. I used to generate menus when I used openbox but decided hand made was better.
+2014-10-27 23:01:51	henesy	Thing is, blackarch repo has over 1k tools
+2014-10-27 23:02:01	henesy	like holy shit i'm not manually entering those
+2014-10-27 23:02:17	henesy	upstream 1k tools held at the bleeding edge (usually)
+2014-10-27 23:03:15	_glitch	Lol. Yeah. Maybe someone has already done it? Search around a bit. 
+2014-10-27 23:04:34	_glitch	Oh, and here's a script for imgur uploading: https://raw.githubusercontent.com/ninetyfourbit/dotfiles/master/scripts/imgur.sh
+2014-10-27 23:06:14	henesy	I searched excessively and found very little in terms of how awesome works, but thank you for the imgur link, i'll use it :D
+2014-10-27 23:06:23	_glitch	I gotta go. I'll catch up with you tomorrow, mate.
+2014-10-27 23:06:30	henesy	Aight, have a good one
+2014-10-27 23:06:39	henesy	Hopefully we can get that mac straightened out
+2014-10-27 23:06:57	_glitch	http://awesome.naquadah.org/wiki/Awesome-menu_basics
+2014-10-27 23:07:08	_glitch	Hope so. That's a link to the awesome wiki
+2014-10-27 23:07:29	_glitch	Hope your menu gets fixed. I'll talk to you tomorrow. 
+2014-10-27 23:07:53	--	irc: disconnected from server
+2014-10-28 20:08:54	henesy	oiiii
+2014-10-28 20:09:00	henesy	how's it goin
+2014-10-28 20:09:08	_glitch	Got Arch installed. Took all fuckin day
+2014-10-28 20:09:18	henesy	But it works? 
+2014-10-28 20:09:30	_glitch	So far. I'm at the login screen lol.
+2014-10-28 20:09:35	_glitch	I literally JUST finished
+2014-10-28 20:09:37	henesy	lol, that's awesome
+2014-10-28 20:09:49	henesy	What steps did you end up taking? 
+2014-10-28 20:10:15	henesy	btw, the arch wiki is severely outdated in terms of macbooks and such, i'm sure a contribution even if just a list of what to do would be much appreciated
+2014-10-28 20:10:26	_glitch	I installed refind on OS X, didn't touch any configs. MAde a /root and /home partition, no /boot, no ESP, nothing. Then followed the 9,2 guide on the wiki... 
+2014-10-28 20:10:39	henesy	oh okay
+2014-10-28 20:10:44	henesy	easier way than i did it
+2014-10-28 20:10:57	_glitch	Oh, I added the Note About 9,1 in it when I got it working last time.
+2014-10-28 20:11:15	henesy	Awesome, you rock man
+2014-10-28 20:11:20	henesy	glad to hear it went well
+2014-10-28 20:11:31	_glitch	Yeah. Now time to install and copy my dotfiles.
+2014-10-28 20:11:35	henesy	heh
+2014-10-28 20:11:42	henesy	.vimrc, the first file I copy over ever
+2014-10-28 20:14:44	_glitch	mine is my color files
+2014-10-28 20:16:43	henesy	color? for terminal/desktop?
+2014-10-28 20:33:44	_glitch	Yeah. 
+2014-10-28 20:41:47	henesy	Niicceee
+2014-10-28 20:41:58	henesy	really glad to hear it's working, sorry I wasn't much help
+2014-10-28 20:42:26	_glitch	It's fine. I tried your way earlier but it didn't work.
+2014-10-28 20:43:34	henesy	darn, sorry :\
+2014-10-28 20:45:30	_glitch	IT's fine.. So, my dotfiles total 857.44 MiB
+2014-10-28 20:48:40	henesy	Holy cow
+2014-10-28 20:48:43	henesy	in just raw text?
+2014-10-28 20:49:12	_glitch	No. Some PDFs and a lot of wallpapers
+2014-10-28 20:49:39	_glitch	github.com/ninetyfourbit/dotfiles
+2014-10-28 20:53:44	henesy	Ah okay, neat
+2014-10-28 21:09:23	_glitch	 Know what else is neat? Getting the macbook finally set up lol
+2014-10-28 21:15:32	henesy	lol
+2014-10-28 21:15:36	henesy	fully functional and everything?
+2014-10-28 21:15:40	henesy	that's pretty awesome
+2014-10-28 21:15:51	henesy	I might give that a go in a couple weeks
+2014-10-28 21:17:27	_glitch	Well, still cloning everything for bspwm but about to start the x server and hope for the best
+2014-10-28 21:18:01	_glitch	Ah, fuckin' driver.
+2014-10-28 21:18:06	_glitch	/s/driver/drivers
+2014-10-28 21:21:44	_glitch	IT LIVES!
+2014-10-28 21:26:37	henesy	AHA
+2014-10-28 21:26:41	henesy	BEAUTIFUL
+2014-10-28 21:27:17	henesy	Any drivers you had to manually install?
+2014-10-28 21:27:45	_glitch	I forgot to install the 'nvidia' drivers and 'xf86-input-synaptics'
+2014-10-28 21:46:09	henesy	ahhh yes
+2014-10-28 21:46:11	henesy	that'll do it
+2014-10-28 21:46:33	henesy	synaptics....i remember back when ubuntu 10.04 was out I had to manually mess with synaptics on my first macbook the first time I put linux on it
+2014-10-28 21:46:43	henesy	for a supposed "easy" install that I could have up and running in <2 hours
+2014-10-28 21:47:00	henesy	turned into how much anti-documentation can we find 
+2014-10-28 21:47:34	_glitch	I'
+2014-10-28 21:47:51	_glitch	ve never had much trouble with computer until this week
+2014-10-28 21:50:35	henesy	Glad to hear it went smoothly though, I plan on installing arch on my macs at some point to succeed the wretched ubuntu that currently resides
+2014-10-28 21:51:47	_glitch	Do you prefer Tiling or Floating?
+2014-10-28 21:53:30	henesy	Tiling if I'm just working on my own/doing day-to-day stuff, floating if I'm working with a ton of windows/new GUI-reliant software
+2014-10-28 21:53:34	henesy	namely things with pop-ups
+2014-10-28 21:54:18	henesy	coding/day-to-day I by far prefer tiling, great for "Getting in the zone"
+2014-10-28 21:54:24	_glitch	Are you using Unity on Ubuntu?
+2014-10-28 21:55:49	henesy	If I'm in classes I do, only because I know everything on it will "work" if I suddenly have to hook up to a projector etc. Otherwise, I'm bouncing around, I used enlightenment for a bit, but want to get dwm/awesome or something else running smoothly
+2014-10-28 21:55:53	henesy	haven't had the time to do it mostly
+2014-10-28 21:56:01	henesy	I use awesome on a thinkpad and a desktop
+2014-10-28 21:56:09	henesy	everything else is headless or running ubuntu
+2014-10-28 21:56:31	_glitch	headless?
+2014-10-28 21:56:35	_glitch	No WM/DE?
+2014-10-28 21:56:38	henesy	servers
+2014-10-28 21:56:52	henesy	and I'll just open ssh to them 
+2014-10-28 21:56:57	_glitch	Ah. So what arr you going to school for?
+2014-10-28 21:57:14	henesy	Computer Science/Computer Engineering
+2014-10-28 21:57:25	henesy	the majority of the server things are for compatibility/hosting
+2014-10-28 21:57:37	henesy	for example some software relies on gnutls 2.x rather than the current 3.x
+2014-10-28 21:57:51	henesy	and I can just have vm's run out of a headless server
+2014-10-28 21:57:59	henesy	to host said services
+2014-10-28 21:59:53	henesy	though now that you mention WM's, I might just make tunneled VNC sessions for dwm or something similarly lightweight
+2014-10-28 22:22:40	_glitch	Sorry. I was getting my colors straightened out
+2014-10-28 22:23:47	henesy	You're fine man, I'm pretty busy myself
+2014-10-28 22:24:36	_glitch	Alright, man. Thanks for the help with the macbook
+2014-10-28 22:29:33	henesy	Sorry I couldn't help more, glad everything worked out.
+2014-10-28 22:29:40	henesy	always a pleasure to help when possible

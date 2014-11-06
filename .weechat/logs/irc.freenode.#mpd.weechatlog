@@ -1,0 +1,23 @@
+2014-11-06 17:55:52	◥	dtch (~weechat@unaffiliated/glitch/x-5362854) has joined #mpd
+2014-11-06 17:55:52	ℹ 	Topic for #mpd is "Music Player Daemon | Latest 0.19.2 | http://www.musicpd.org/ | Problems? Just ask away, and please provide the info as explained on: http://www.musicpd.org/help/"
+2014-11-06 17:55:52	ℹ 	Topic set by cirrus on Sun, 02 Nov 2014 07:59:06
+2014-11-06 17:55:52	ℹ 	Channel #mpd: 123 nicks (1 op, 0 voices, 122 normals)
+2014-11-06 17:55:52	ℹ 	PvNotice(ChanServ): Welcome to the Music Player Daemon channel.  Before you ask for help, please read and follow http://www.musicpd.org/help/
+2014-11-06 17:55:54	ℹ 	Channel created on Sun, 26 Nov 2006 00:42:55
+2014-11-06 17:55:58	ℹ 	Nicks #mpd: [@avuton Ahti333 Alam_Squeeze alethiophile angry_vincent apo architekt ashka azeam Beamboom blami caveat- Chais choupy chowbok christoph_debian cirrus codehero cornerman cotko CybDev daktak Dan_NH dansbandit DarkFox deepy determinant dezgot dirk| djinni` DjSlash doppo drwx dtch Ducky dwmw2_gone DylanJ elenril FabTG FabTG_ Fenhl freeedrich| fsfs Fuuzetsu Gentle Gumboot haasn Haudegen hax404 hrnz ilmig jA_cOp jast jat johnhamelink jpleau Kabaka ketas KittyKatt klaas krabador Kuukunen- lead lynxis Makere mavhc mduk Meckafet1 mikroflops mmu_man mohaa mr_clark mrtux mt musicmatze nervengift nichego NightMonkey nisstyre ntio piccata Ploppz protomouse qball qpdb rafi ranperry Rasi rellla rhoering_ rivarun Riviera_ RYogh samfuzz SardemFF7 sarkyniin sc_ seba simabeis soapsurfer sochotnicky souther storrgie_ SuperTux88 tg the_al thor77 thorsten` thread tm512 tomww trumee twistedpixels unK_ untitaker VargaD vehk whoami x73 Xack yogan_ zefer zeltak_]
+2014-11-06 17:55:58	ℹ 	Channel #mpd: 123 nicks (1 op, 0 voices, 122 normals)
+2014-11-06 17:56:03	◥	apt-get_ (~apt-get@41.249.198.57) has joined #mpd
+2014-11-06 17:56:40	◣	qpdb (~qpdb@unaffiliated/qpdb) has left #mpd ("WeeChat 0.4.3")
+2014-11-06 17:57:44	◣	sarkyniin (~apt-get@41.249.193.185) has quit (Ping timeout: 255 seconds)
+2014-11-06 17:57:46	dtch	unK_: I'm trying to change the color of the progressbar but I don't see the option in the config. It's the green on the scrot: http://a.pomf.se/pjvwpi.png
+2014-11-06 17:58:07	unK_	dtch: progressbar_color?
+2014-11-06 17:58:31	dtch	unK_: progressbar_color only changes the 'empty' portion of the progressbar. How can I change the 'full' portion?
+2014-11-06 17:58:39	dtch	I have progressbar_color set to black
+2014-11-06 17:59:18	unK_	progressbar_elapsed_color. this is in example config file
+2014-11-06 18:00:24	dtch	unK_: Thanks. I've been searching for hours.
+2014-11-06 18:00:44	dtch	Since I'm here, one more question. Is it possible to use bold colors in the config?
+2014-11-06 18:00:56	dtch	ie; colors 8 - 15 in .Xresources?
+2014-11-06 18:01:06	unK_	for some things yes
+2014-11-06 18:01:16	unK_	setting bold attribute uses them
+2014-11-06 18:01:46	dtch	Alright. Thank you very much for your help.
+2014-11-06 18:02:16	◣	dtch (~weechat@unaffiliated/glitch/x-5362854) has left #mpd ("WeeChat 1.0.1")
