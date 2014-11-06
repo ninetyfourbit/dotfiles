@@ -172,7 +172,7 @@ visualizer_look = "●│"
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+song_list_format = "{%a - }{%t}|{$8%f$9}$R{$2(%l)$9}"
 #
 song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
 #
@@ -480,6 +480,7 @@ color2 = "cyan"
 main_window_highlight_color = "white"
 #
 progressbar_color = "black"
+progressbar_elapsed_color = "magenta"
 #
 statusbar_color = "white"
 #
