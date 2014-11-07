@@ -9,4 +9,4 @@ Required:
 * weathercli
 * rxvt-unicode
 
-![ss.png](http://a.pomf.se/keegvu.png)
+![ss.png](http://a.pomf.se/jydasw.png)
